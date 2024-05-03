@@ -59,6 +59,8 @@ struct ProfileView: View {
             ProgressView()
           }
         }
+            
+        CheckoutView()
       }
       .navigationTitle("Profile")
       .toolbar(content: {
@@ -78,6 +80,7 @@ struct ProfileView: View {
     .task {
       await getInitialProfile()
     }
+      
   }
 
   func getInitialProfile() async {
