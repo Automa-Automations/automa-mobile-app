@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		389B17F02BE5652B006D8BEB /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = 389B17EF2BE5652B006D8BEB /* Supabase */; };
+		389B17F22BE56547006D8BEB /* Supabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389B17F12BE56547006D8BEB /* Supabase.swift */; };
+		389B17F42BE565FD006D8BEB /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389B17F32BE565FD006D8BEB /* AuthView.swift */; };
+		389B17F72BE56747006D8BEB /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389B17F62BE56747006D8BEB /* ProfileView.swift */; };
+		389B17F92BE5678E006D8BEB /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389B17F82BE5678E006D8BEB /* Models.swift */; };
+		389B17FB2BE567AA006D8BEB /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389B17FA2BE567AA006D8BEB /* AppView.swift */; };
+		389B17FD2BE56D5F006D8BEB /* AvatarImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389B17FC2BE56D5F006D8BEB /* AvatarImage.swift */; };
 		38DB8AFF2BD77C550091008B /* AutomaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DB8AFE2BD77C550091008B /* AutomaApp.swift */; };
 		38DB8B012BD77C550091008B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DB8B002BD77C550091008B /* ContentView.swift */; };
 		38DB8B032BD77C580091008B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38DB8B022BD77C580091008B /* Assets.xcassets */; };
@@ -14,6 +21,11 @@
 		38DB8B102BD77C590091008B /* AutomaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DB8B0F2BD77C590091008B /* AutomaTests.swift */; };
 		38DB8B1A2BD77C590091008B /* AutomaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DB8B192BD77C590091008B /* AutomaUITests.swift */; };
 		38DB8B1C2BD77C590091008B /* AutomaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DB8B1B2BD77C590091008B /* AutomaUITestsLaunchTests.swift */; };
+		38E2B5C72BD93F4A009327D4 /* Stripe in Frameworks */ = {isa = PBXBuildFile; productRef = 38E2B5C62BD93F4A009327D4 /* Stripe */; };
+		38E2B5C92BD93F4A009327D4 /* StripeApplePay in Frameworks */ = {isa = PBXBuildFile; productRef = 38E2B5C82BD93F4A009327D4 /* StripeApplePay */; };
+		38E2B5CB2BD93F4A009327D4 /* StripeCardScan in Frameworks */ = {isa = PBXBuildFile; productRef = 38E2B5CA2BD93F4A009327D4 /* StripeCardScan */; };
+		38E2B5CD2BD93F4A009327D4 /* StripeFinancialConnections in Frameworks */ = {isa = PBXBuildFile; productRef = 38E2B5CC2BD93F4A009327D4 /* StripeFinancialConnections */; };
+		38E2B5CF2BD93F4A009327D4 /* StripeIdentity in Frameworks */ = {isa = PBXBuildFile; productRef = 38E2B5CE2BD93F4A009327D4 /* StripeIdentity */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +46,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		389B17F12BE56547006D8BEB /* Supabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Supabase.swift; sourceTree = "<group>"; };
+		389B17F32BE565FD006D8BEB /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
+		389B17F52BE5668D006D8BEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		389B17F62BE56747006D8BEB /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		389B17F82BE5678E006D8BEB /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		389B17FA2BE567AA006D8BEB /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
+		389B17FC2BE56D5F006D8BEB /* AvatarImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarImage.swift; sourceTree = "<group>"; };
 		38DB8AFB2BD77C550091008B /* Automa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Automa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38DB8AFE2BD77C550091008B /* AutomaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutomaApp.swift; sourceTree = "<group>"; };
 		38DB8B002BD77C550091008B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -51,6 +70,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38E2B5CB2BD93F4A009327D4 /* StripeCardScan in Frameworks */,
+				38E2B5CD2BD93F4A009327D4 /* StripeFinancialConnections in Frameworks */,
+				389B17F02BE5652B006D8BEB /* Supabase in Frameworks */,
+				38E2B5CF2BD93F4A009327D4 /* StripeIdentity in Frameworks */,
+				38E2B5C72BD93F4A009327D4 /* Stripe in Frameworks */,
+				38E2B5C92BD93F4A009327D4 /* StripeApplePay in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,7 +119,14 @@
 		38DB8AFD2BD77C550091008B /* Automa */ = {
 			isa = PBXGroup;
 			children = (
+				389B17F52BE5668D006D8BEB /* Info.plist */,
 				38DB8AFE2BD77C550091008B /* AutomaApp.swift */,
+				389B17F12BE56547006D8BEB /* Supabase.swift */,
+				389B17F32BE565FD006D8BEB /* AuthView.swift */,
+				389B17F82BE5678E006D8BEB /* Models.swift */,
+				389B17FA2BE567AA006D8BEB /* AppView.swift */,
+				389B17FC2BE56D5F006D8BEB /* AvatarImage.swift */,
+				389B17F62BE56747006D8BEB /* ProfileView.swift */,
 				38DB8B002BD77C550091008B /* ContentView.swift */,
 				38DB8B022BD77C580091008B /* Assets.xcassets */,
 				38DB8B042BD77C580091008B /* Preview Content */,
@@ -143,6 +175,14 @@
 			dependencies = (
 			);
 			name = Automa;
+			packageProductDependencies = (
+				38E2B5C62BD93F4A009327D4 /* Stripe */,
+				38E2B5C82BD93F4A009327D4 /* StripeApplePay */,
+				38E2B5CA2BD93F4A009327D4 /* StripeCardScan */,
+				38E2B5CC2BD93F4A009327D4 /* StripeFinancialConnections */,
+				38E2B5CE2BD93F4A009327D4 /* StripeIdentity */,
+				389B17EF2BE5652B006D8BEB /* Supabase */,
+			);
 			productName = Automa;
 			productReference = 38DB8AFB2BD77C550091008B /* Automa.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +255,10 @@
 				Base,
 			);
 			mainGroup = 38DB8AF22BD77C550091008B;
+			packageReferences = (
+				38E2B5C52BD93F2A009327D4 /* XCRemoteSwiftPackageReference "stripe-ios-spm" */,
+				389B17EE2BE5652B006D8BEB /* XCRemoteSwiftPackageReference "supabase-swift" */,
+			);
 			productRefGroup = 38DB8AFC2BD77C550091008B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -258,6 +302,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				38DB8B012BD77C550091008B /* ContentView.swift in Sources */,
+				389B17F22BE56547006D8BEB /* Supabase.swift in Sources */,
+				389B17F72BE56747006D8BEB /* ProfileView.swift in Sources */,
+				389B17FB2BE567AA006D8BEB /* AppView.swift in Sources */,
+				389B17F92BE5678E006D8BEB /* Models.swift in Sources */,
+				389B17F42BE565FD006D8BEB /* AuthView.swift in Sources */,
+				389B17FD2BE56D5F006D8BEB /* AvatarImage.swift in Sources */,
 				38DB8AFF2BD77C550091008B /* AutomaApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -425,6 +475,7 @@
 				DEVELOPMENT_TEAM = 6D6QTRW962;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Automa/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -454,6 +505,7 @@
 				DEVELOPMENT_TEAM = 6D6QTRW962;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Automa/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -588,6 +640,58 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		389B17EE2BE5652B006D8BEB /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/supabase-community/supabase-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.5.1;
+			};
+		};
+		38E2B5C52BD93F2A009327D4 /* XCRemoteSwiftPackageReference "stripe-ios-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stripe/stripe-ios-spm";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 23.27.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		389B17EF2BE5652B006D8BEB /* Supabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 389B17EE2BE5652B006D8BEB /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Supabase;
+		};
+		38E2B5C62BD93F4A009327D4 /* Stripe */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 38E2B5C52BD93F2A009327D4 /* XCRemoteSwiftPackageReference "stripe-ios-spm" */;
+			productName = Stripe;
+		};
+		38E2B5C82BD93F4A009327D4 /* StripeApplePay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 38E2B5C52BD93F2A009327D4 /* XCRemoteSwiftPackageReference "stripe-ios-spm" */;
+			productName = StripeApplePay;
+		};
+		38E2B5CA2BD93F4A009327D4 /* StripeCardScan */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 38E2B5C52BD93F2A009327D4 /* XCRemoteSwiftPackageReference "stripe-ios-spm" */;
+			productName = StripeCardScan;
+		};
+		38E2B5CC2BD93F4A009327D4 /* StripeFinancialConnections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 38E2B5C52BD93F2A009327D4 /* XCRemoteSwiftPackageReference "stripe-ios-spm" */;
+			productName = StripeFinancialConnections;
+		};
+		38E2B5CE2BD93F4A009327D4 /* StripeIdentity */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 38E2B5C52BD93F2A009327D4 /* XCRemoteSwiftPackageReference "stripe-ios-spm" */;
+			productName = StripeIdentity;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 38DB8AF32BD77C550091008B /* Project object */;
 }
