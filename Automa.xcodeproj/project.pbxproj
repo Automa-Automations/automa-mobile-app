@@ -21,11 +21,6 @@
 		38DB8B102BD77C590091008B /* AutomaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DB8B0F2BD77C590091008B /* AutomaTests.swift */; };
 		38DB8B1A2BD77C590091008B /* AutomaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DB8B192BD77C590091008B /* AutomaUITests.swift */; };
 		38DB8B1C2BD77C590091008B /* AutomaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DB8B1B2BD77C590091008B /* AutomaUITestsLaunchTests.swift */; };
-		38E2B5C72BD93F4A009327D4 /* Stripe in Frameworks */ = {isa = PBXBuildFile; productRef = 38E2B5C62BD93F4A009327D4 /* Stripe */; };
-		38E2B5C92BD93F4A009327D4 /* StripeApplePay in Frameworks */ = {isa = PBXBuildFile; productRef = 38E2B5C82BD93F4A009327D4 /* StripeApplePay */; };
-		38E2B5CB2BD93F4A009327D4 /* StripeCardScan in Frameworks */ = {isa = PBXBuildFile; productRef = 38E2B5CA2BD93F4A009327D4 /* StripeCardScan */; };
-		38E2B5CD2BD93F4A009327D4 /* StripeFinancialConnections in Frameworks */ = {isa = PBXBuildFile; productRef = 38E2B5CC2BD93F4A009327D4 /* StripeFinancialConnections */; };
-		38E2B5CF2BD93F4A009327D4 /* StripeIdentity in Frameworks */ = {isa = PBXBuildFile; productRef = 38E2B5CE2BD93F4A009327D4 /* StripeIdentity */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,12 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38E2B5CB2BD93F4A009327D4 /* StripeCardScan in Frameworks */,
-				38E2B5CD2BD93F4A009327D4 /* StripeFinancialConnections in Frameworks */,
 				389B17F02BE5652B006D8BEB /* Supabase in Frameworks */,
-				38E2B5CF2BD93F4A009327D4 /* StripeIdentity in Frameworks */,
-				38E2B5C72BD93F4A009327D4 /* Stripe in Frameworks */,
-				38E2B5C92BD93F4A009327D4 /* StripeApplePay in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,11 +166,6 @@
 			);
 			name = Automa;
 			packageProductDependencies = (
-				38E2B5C62BD93F4A009327D4 /* Stripe */,
-				38E2B5C82BD93F4A009327D4 /* StripeApplePay */,
-				38E2B5CA2BD93F4A009327D4 /* StripeCardScan */,
-				38E2B5CC2BD93F4A009327D4 /* StripeFinancialConnections */,
-				38E2B5CE2BD93F4A009327D4 /* StripeIdentity */,
 				389B17EF2BE5652B006D8BEB /* Supabase */,
 			);
 			productName = Automa;
@@ -665,31 +650,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 389B17EE2BE5652B006D8BEB /* XCRemoteSwiftPackageReference "supabase-swift" */;
 			productName = Supabase;
-		};
-		38E2B5C62BD93F4A009327D4 /* Stripe */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 38E2B5C52BD93F2A009327D4 /* XCRemoteSwiftPackageReference "stripe-ios-spm" */;
-			productName = Stripe;
-		};
-		38E2B5C82BD93F4A009327D4 /* StripeApplePay */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 38E2B5C52BD93F2A009327D4 /* XCRemoteSwiftPackageReference "stripe-ios-spm" */;
-			productName = StripeApplePay;
-		};
-		38E2B5CA2BD93F4A009327D4 /* StripeCardScan */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 38E2B5C52BD93F2A009327D4 /* XCRemoteSwiftPackageReference "stripe-ios-spm" */;
-			productName = StripeCardScan;
-		};
-		38E2B5CC2BD93F4A009327D4 /* StripeFinancialConnections */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 38E2B5C52BD93F2A009327D4 /* XCRemoteSwiftPackageReference "stripe-ios-spm" */;
-			productName = StripeFinancialConnections;
-		};
-		38E2B5CE2BD93F4A009327D4 /* StripeIdentity */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 38E2B5C52BD93F2A009327D4 /* XCRemoteSwiftPackageReference "stripe-ios-spm" */;
-			productName = StripeIdentity;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
