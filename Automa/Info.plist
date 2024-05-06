@@ -13,5 +13,11 @@
 			</array>
 		</dict>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Black.ttf</string>
+	</array>
+	<key>LSApplicationQueriesSchemes</key>
+	<array/>
 </dict>
 </plist>

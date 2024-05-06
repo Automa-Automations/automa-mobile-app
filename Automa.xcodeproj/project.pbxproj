@@ -23,6 +23,16 @@
 		38DB8B102BD77C590091008B /* AutomaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DB8B0F2BD77C590091008B /* AutomaTests.swift */; };
 		38DB8B1A2BD77C590091008B /* AutomaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DB8B192BD77C590091008B /* AutomaUITests.swift */; };
 		38DB8B1C2BD77C590091008B /* AutomaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DB8B1B2BD77C590091008B /* AutomaUITestsLaunchTests.swift */; };
+		38E2F8952BE8E95700D4EE51 /* Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 38E2F88C2BE8E95600D4EE51 /* Black.ttf */; };
+		38E2F8962BE8E95700D4EE51 /* Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 38E2F88D2BE8E95600D4EE51 /* Bold.ttf */; };
+		38E2F8972BE8E95700D4EE51 /* Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 38E2F88E2BE8E95600D4EE51 /* Medium.ttf */; };
+		38E2F8982BE8E95700D4EE51 /* ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 38E2F88F2BE8E95600D4EE51 /* ExtraLight.ttf */; };
+		38E2F8992BE8E95700D4EE51 /* ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 38E2F8902BE8E95700D4EE51 /* ExtraBold.ttf */; };
+		38E2F89A2BE8E95700D4EE51 /* Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 38E2F8912BE8E95700D4EE51 /* Light.ttf */; };
+		38E2F89B2BE8E95700D4EE51 /* Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 38E2F8922BE8E95700D4EE51 /* Regular.ttf */; };
+		38E2F89C2BE8E95700D4EE51 /* SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 38E2F8932BE8E95700D4EE51 /* SemiBold.ttf */; };
+		38E2F89D2BE8E95700D4EE51 /* Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 38E2F8942BE8E95700D4EE51 /* Thin.ttf */; };
+		38E2F8A02BE9064100D4EE51 /* AlertToast in Frameworks */ = {isa = PBXBuildFile; productRef = 38E2F89F2BE9064100D4EE51 /* AlertToast */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +71,15 @@
 		38DB8B152BD77C590091008B /* AutomaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AutomaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		38DB8B192BD77C590091008B /* AutomaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutomaUITests.swift; sourceTree = "<group>"; };
 		38DB8B1B2BD77C590091008B /* AutomaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutomaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		38E2F88C2BE8E95600D4EE51 /* Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Black.ttf; sourceTree = "<group>"; };
+		38E2F88D2BE8E95600D4EE51 /* Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Bold.ttf; sourceTree = "<group>"; };
+		38E2F88E2BE8E95600D4EE51 /* Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Medium.ttf; sourceTree = "<group>"; };
+		38E2F88F2BE8E95600D4EE51 /* ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ExtraLight.ttf; sourceTree = "<group>"; };
+		38E2F8902BE8E95700D4EE51 /* ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ExtraBold.ttf; sourceTree = "<group>"; };
+		38E2F8912BE8E95700D4EE51 /* Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Light.ttf; sourceTree = "<group>"; };
+		38E2F8922BE8E95700D4EE51 /* Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Regular.ttf; sourceTree = "<group>"; };
+		38E2F8932BE8E95700D4EE51 /* SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SemiBold.ttf; sourceTree = "<group>"; };
+		38E2F8942BE8E95700D4EE51 /* Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Thin.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38E2F8A02BE9064100D4EE51 /* AlertToast in Frameworks */,
 				389B17FF2BE576BE006D8BEB /* StripePaymentSheet in Frameworks */,
 				389B17F02BE5652B006D8BEB /* Supabase in Frameworks */,
 			);
@@ -122,6 +142,7 @@
 				389B17FA2BE567AA006D8BEB /* AppView.swift */,
 				389B17FC2BE56D5F006D8BEB /* AvatarImage.swift */,
 				389B17F62BE56747006D8BEB /* ProfileView.swift */,
+				38E2F88B2BE8E92D00D4EE51 /* Font */,
 				38DB8B002BD77C550091008B /* ContentView.swift */,
 				38DB8B022BD77C580091008B /* Assets.xcassets */,
 				38DB8B042BD77C580091008B /* Preview Content */,
@@ -154,6 +175,22 @@
 			path = AutomaUITests;
 			sourceTree = "<group>";
 		};
+		38E2F88B2BE8E92D00D4EE51 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				38E2F88C2BE8E95600D4EE51 /* Black.ttf */,
+				38E2F88D2BE8E95600D4EE51 /* Bold.ttf */,
+				38E2F8902BE8E95700D4EE51 /* ExtraBold.ttf */,
+				38E2F88F2BE8E95600D4EE51 /* ExtraLight.ttf */,
+				38E2F8912BE8E95700D4EE51 /* Light.ttf */,
+				38E2F88E2BE8E95600D4EE51 /* Medium.ttf */,
+				38E2F8922BE8E95700D4EE51 /* Regular.ttf */,
+				38E2F8932BE8E95700D4EE51 /* SemiBold.ttf */,
+				38E2F8942BE8E95700D4EE51 /* Thin.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -173,6 +210,7 @@
 			packageProductDependencies = (
 				389B17EF2BE5652B006D8BEB /* Supabase */,
 				389B17FE2BE576BE006D8BEB /* StripePaymentSheet */,
+				38E2F89F2BE9064100D4EE51 /* AlertToast */,
 			);
 			productName = Automa;
 			productReference = 38DB8AFB2BD77C550091008B /* Automa.app */;
@@ -249,6 +287,7 @@
 			packageReferences = (
 				38E2B5C52BD93F2A009327D4 /* XCRemoteSwiftPackageReference "stripe-ios-spm" */,
 				389B17EE2BE5652B006D8BEB /* XCRemoteSwiftPackageReference "supabase-swift" */,
+				38E2F89E2BE9064100D4EE51 /* XCRemoteSwiftPackageReference "AlertToast" */,
 			);
 			productRefGroup = 38DB8AFC2BD77C550091008B /* Products */;
 			projectDirPath = "";
@@ -267,6 +306,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				38DB8B062BD77C580091008B /* Preview Assets.xcassets in Resources */,
+				38E2F89B2BE8E95700D4EE51 /* Regular.ttf in Resources */,
+				38E2F8982BE8E95700D4EE51 /* ExtraLight.ttf in Resources */,
+				38E2F89A2BE8E95700D4EE51 /* Light.ttf in Resources */,
+				38E2F8952BE8E95700D4EE51 /* Black.ttf in Resources */,
+				38E2F89D2BE8E95700D4EE51 /* Thin.ttf in Resources */,
+				38E2F8992BE8E95700D4EE51 /* ExtraBold.ttf in Resources */,
+				38E2F8962BE8E95700D4EE51 /* Bold.ttf in Resources */,
+				38E2F8972BE8E95700D4EE51 /* Medium.ttf in Resources */,
+				38E2F89C2BE8E95700D4EE51 /* SemiBold.ttf in Resources */,
 				38DB8B032BD77C580091008B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -650,6 +698,14 @@
 				minimumVersion = 23.27.1;
 			};
 		};
+		38E2F89E2BE9064100D4EE51 /* XCRemoteSwiftPackageReference "AlertToast" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/elai950/AlertToast";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.3.9;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -662,6 +718,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 38E2B5C52BD93F2A009327D4 /* XCRemoteSwiftPackageReference "stripe-ios-spm" */;
 			productName = StripePaymentSheet;
+		};
+		38E2F89F2BE9064100D4EE51 /* AlertToast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 38E2F89E2BE9064100D4EE51 /* XCRemoteSwiftPackageReference "AlertToast" */;
+			productName = AlertToast;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
