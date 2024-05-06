@@ -1,6 +1,6 @@
 import stripe
 from flask import Flask, jsonify
-stripe.api_key = 'sk_test_4eC39HqLyjWDarjtT1zdp7dc'
+stripe.api_key = 'sk_test_51PCbyWRpgjuWcdPRWkDUKRRShKb8lZiYKQP8Ov37s2TdaAAGJYB4kteMHmiTHU7aBM40IoNbejAgMjRtn2wR4jDJ00gazKtd1m'
 
 import os
 
@@ -27,7 +27,7 @@ def payment_sheet():
   return jsonify(paymentIntent=paymentIntent.client_secret,
                  ephemeralKey=ephemeralKey.secret,
                  customer=customer.id,
-                 publishableKey='pk_test_TYooMQauvdEDq54NiTphI7jx')
+                 publishableKey='pk_test_51PCbyWRpgjuWcdPRNb5nGYKleCCaDgtnAEcidL7x8CEwR7jkYicsAM2DCHwmZO7CsKE0uYFPocH974I1xtHdDseP004I8LUgiT')
 
 
 if __name__ == '__main__':

@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		38070FF22BE961B300352E0D /* CloseEmailSentSheetToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38070FF12BE961B300352E0D /* CloseEmailSentSheetToolBar.swift */; };
+		38070FF42BE9631300352E0D /* AuthErrorAlertIOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38070FF32BE9631300352E0D /* AuthErrorAlertIOS.swift */; };
+		3818FC0D2BE94ACA00543D08 /* AuthScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3818FC0C2BE94ACA00543D08 /* AuthScreenModel.swift */; };
+		3818FC1C2BE94EA800543D08 /* EmailResentAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3818FC1B2BE94EA800543D08 /* EmailResentAlert.swift */; };
+		3818FC1E2BE94F2F00543D08 /* EmailSentSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3818FC1D2BE94F2F00543D08 /* EmailSentSheet.swift */; };
+		3818FC212BE952C500543D08 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3818FC202BE952C500543D08 /* Authentication.swift */; };
+		3818FC232BE957A100543D08 /* ExitAppToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3818FC222BE957A100543D08 /* ExitAppToolBar.swift */; };
 		389B17F02BE5652B006D8BEB /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = 389B17EF2BE5652B006D8BEB /* Supabase */; };
 		389B17F22BE56547006D8BEB /* Supabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389B17F12BE56547006D8BEB /* Supabase.swift */; };
 		389B17F42BE565FD006D8BEB /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389B17F32BE565FD006D8BEB /* AuthView.swift */; };
@@ -53,6 +60,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		38070FF12BE961B300352E0D /* CloseEmailSentSheetToolBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseEmailSentSheetToolBar.swift; sourceTree = "<group>"; };
+		38070FF32BE9631300352E0D /* AuthErrorAlertIOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthErrorAlertIOS.swift; sourceTree = "<group>"; };
+		3818FC0C2BE94ACA00543D08 /* AuthScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthScreenModel.swift; sourceTree = "<group>"; };
+		3818FC1B2BE94EA800543D08 /* EmailResentAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailResentAlert.swift; sourceTree = "<group>"; };
+		3818FC1D2BE94F2F00543D08 /* EmailSentSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailSentSheet.swift; sourceTree = "<group>"; };
+		3818FC202BE952C500543D08 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
+		3818FC222BE957A100543D08 /* ExitAppToolBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExitAppToolBar.swift; sourceTree = "<group>"; };
 		389B17F12BE56547006D8BEB /* Supabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Supabase.swift; sourceTree = "<group>"; };
 		389B17F32BE565FD006D8BEB /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 		389B17F52BE5668D006D8BEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -110,6 +124,146 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3818FC082BE94A7700543D08 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				3818FC092BE94A8900543D08 /* AuthScreen */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		3818FC092BE94A8900543D08 /* AuthScreen */ = {
+			isa = PBXGroup;
+			children = (
+				3818FC1A2BE94E9B00543D08 /* Alerts */,
+				3818FC152BE94CD000543D08 /* Cells */,
+				3818FC0E2BE94BCE00543D08 /* Drawers */,
+				3818FC0B2BE94A9800543D08 /* Sheets */,
+				3818FC0A2BE94A9300543D08 /* Toolbars */,
+				3818FC0C2BE94ACA00543D08 /* AuthScreenModel.swift */,
+			);
+			path = AuthScreen;
+			sourceTree = "<group>";
+		};
+		3818FC0A2BE94A9300543D08 /* Toolbars */ = {
+			isa = PBXGroup;
+			children = (
+				3818FC222BE957A100543D08 /* ExitAppToolBar.swift */,
+				38070FF12BE961B300352E0D /* CloseEmailSentSheetToolBar.swift */,
+			);
+			path = Toolbars;
+			sourceTree = "<group>";
+		};
+		3818FC0B2BE94A9800543D08 /* Sheets */ = {
+			isa = PBXGroup;
+			children = (
+				3818FC1D2BE94F2F00543D08 /* EmailSentSheet.swift */,
+			);
+			path = Sheets;
+			sourceTree = "<group>";
+		};
+		3818FC0E2BE94BCE00543D08 /* Drawers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Drawers;
+			sourceTree = "<group>";
+		};
+		3818FC0F2BE94BDE00543D08 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		3818FC112BE94BED00543D08 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3818FC1F2BE952B500543D08 /* Networking */,
+				3818FC192BE94D1D00543D08 /* Protocols */,
+				3818FC142BE94C5300543D08 /* Utility */,
+				3818FC132BE94C3E00543D08 /* Enums */,
+				3818FC0F2BE94BDE00543D08 /* Extensions */,
+				3818FC122BE94C1600543D08 /* Entities */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3818FC122BE94C1600543D08 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		3818FC132BE94C3E00543D08 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		3818FC142BE94C5300543D08 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		3818FC152BE94CD000543D08 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		3818FC162BE94CE300543D08 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				3818FC182BE94D0600543D08 /* Constants */,
+				3818FC172BE94CE900543D08 /* Components */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		3818FC172BE94CE900543D08 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		3818FC182BE94D0600543D08 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		3818FC192BE94D1D00543D08 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		3818FC1A2BE94E9B00543D08 /* Alerts */ = {
+			isa = PBXGroup;
+			children = (
+				3818FC1B2BE94EA800543D08 /* EmailResentAlert.swift */,
+				38070FF32BE9631300352E0D /* AuthErrorAlertIOS.swift */,
+			);
+			path = Alerts;
+			sourceTree = "<group>";
+		};
+		3818FC1F2BE952B500543D08 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				3818FC202BE952C500543D08 /* Authentication.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		38DB8AF22BD77C550091008B = {
 			isa = PBXGroup;
 			children = (
@@ -136,11 +290,14 @@
 				389B17F52BE5668D006D8BEB /* Info.plist */,
 				38DB8AFE2BD77C550091008B /* AutomaApp.swift */,
 				389B17F12BE56547006D8BEB /* Supabase.swift */,
+				3818FC082BE94A7700543D08 /* Screens */,
 				389B17F32BE565FD006D8BEB /* AuthView.swift */,
 				389B18002BE57774006D8BEB /* CheckoutView.swift */,
 				389B17F82BE5678E006D8BEB /* Models.swift */,
 				389B17FA2BE567AA006D8BEB /* AppView.swift */,
+				3818FC112BE94BED00543D08 /* Models */,
 				389B17FC2BE56D5F006D8BEB /* AvatarImage.swift */,
+				3818FC162BE94CE300543D08 /* Core */,
 				389B17F62BE56747006D8BEB /* ProfileView.swift */,
 				38E2F88B2BE8E92D00D4EE51 /* Font */,
 				38DB8B002BD77C550091008B /* ContentView.swift */,
@@ -340,14 +497,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3818FC1C2BE94EA800543D08 /* EmailResentAlert.swift in Sources */,
+				38070FF42BE9631300352E0D /* AuthErrorAlertIOS.swift in Sources */,
+				3818FC0D2BE94ACA00543D08 /* AuthScreenModel.swift in Sources */,
 				38DB8B012BD77C550091008B /* ContentView.swift in Sources */,
 				389B17F22BE56547006D8BEB /* Supabase.swift in Sources */,
+				3818FC212BE952C500543D08 /* Authentication.swift in Sources */,
 				389B17F72BE56747006D8BEB /* ProfileView.swift in Sources */,
 				389B17FB2BE567AA006D8BEB /* AppView.swift in Sources */,
 				389B17F92BE5678E006D8BEB /* Models.swift in Sources */,
 				389B17F42BE565FD006D8BEB /* AuthView.swift in Sources */,
+				3818FC232BE957A100543D08 /* ExitAppToolBar.swift in Sources */,
 				389B17FD2BE56D5F006D8BEB /* AvatarImage.swift in Sources */,
 				38DB8AFF2BD77C550091008B /* AutomaApp.swift in Sources */,
+				3818FC1E2BE94F2F00543D08 /* EmailSentSheet.swift in Sources */,
+				38070FF22BE961B300352E0D /* CloseEmailSentSheetToolBar.swift in Sources */,
 				389B18012BE57774006D8BEB /* CheckoutView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

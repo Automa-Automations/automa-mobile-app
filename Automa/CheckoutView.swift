@@ -26,7 +26,7 @@ class MyBackendModel: ObservableObject {
             let paymentIntentClientSecret = json["paymentIntent"] as? String,
             let publishableKey = json["publishableKey"] as? String,
             let self = self else {
-        // Handle error
+          print(error ?? "No Error")
         return
       }
 
