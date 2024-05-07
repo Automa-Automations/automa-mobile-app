@@ -21,20 +21,8 @@ struct AuthScreen: View {
         NavigationStack {
             VStack(spacing: 18) {
                 VStack(spacing: 10) {
-                    Text("Lets sign you in.")
-                        .font(.custom("Inter", size: 42))
-                        .fontWeight(.thin)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .padding(.leading, 25.0)
-                        .foregroundColor(Color("Primary"))
-
-                    Text("Welcome back. \n Lets get Automating!")
-                        .font(.custom("Inter", size: 32))
-                        .fontWeight(.thin)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .padding(.leading, 25.0)
-                        .foregroundColor(Color("TextPrimary"))
-                }
+                    GenericTitle(title: "Lets sign you in.", description: "Welcome back. \nLets get automating!")
+               }
 
                 Spacer()
 

@@ -10,7 +10,11 @@
 		38070FF22BE961B300352E0D /* CloseEmailSentSheetToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38070FF12BE961B300352E0D /* CloseEmailSentSheetToolBar.swift */; };
 		38070FF42BE9631300352E0D /* AuthErrorAlertIOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38070FF32BE9631300352E0D /* AuthErrorAlertIOS.swift */; };
 		38070FF62BEA41B300352E0D /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38070FF52BEA41B300352E0D /* Color.swift */; };
-		38070FFA2BEA530C00352E0D /* StripePaymentProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38070FF92BEA530C00352E0D /* StripePaymentProvider.swift */; };
+		38070FFA2BEA530C00352E0D /* PaymentSheetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38070FF92BEA530C00352E0D /* PaymentSheetModel.swift */; };
+		38070FFF2BEAB6AA00352E0D /* PaymentError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38070FFE2BEAB6AA00352E0D /* PaymentError.swift */; };
+		380710022BEAB95300352E0D /* PaymentButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380710012BEAB95300352E0D /* PaymentButton.swift */; };
+		380710052BEAB9E000352E0D /* SignOutToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380710042BEAB9E000352E0D /* SignOutToolbar.swift */; };
+		380710072BEABA9200352E0D /* GenericTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380710062BEABA9200352E0D /* GenericTitle.swift */; };
 		3818FC0D2BE94ACA00543D08 /* AuthScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3818FC0C2BE94ACA00543D08 /* AuthScreenModel.swift */; };
 		3818FC1C2BE94EA800543D08 /* EmailResentAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3818FC1B2BE94EA800543D08 /* EmailResentAlert.swift */; };
 		3818FC1E2BE94F2F00543D08 /* EmailSentSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3818FC1D2BE94F2F00543D08 /* EmailSentSheet.swift */; };
@@ -65,7 +69,11 @@
 		38070FF12BE961B300352E0D /* CloseEmailSentSheetToolBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseEmailSentSheetToolBar.swift; sourceTree = "<group>"; };
 		38070FF32BE9631300352E0D /* AuthErrorAlertIOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthErrorAlertIOS.swift; sourceTree = "<group>"; };
 		38070FF52BEA41B300352E0D /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Color.swift; path = ../../../../../../Documents/Color.swift; sourceTree = "<group>"; };
-		38070FF92BEA530C00352E0D /* StripePaymentProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StripePaymentProvider.swift; sourceTree = "<group>"; };
+		38070FF92BEA530C00352E0D /* PaymentSheetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentSheetModel.swift; sourceTree = "<group>"; };
+		38070FFE2BEAB6AA00352E0D /* PaymentError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PaymentError.swift; path = ../../../../../../../../../Applications/PaymentError.swift; sourceTree = "<group>"; };
+		380710012BEAB95300352E0D /* PaymentButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentButton.swift; sourceTree = "<group>"; };
+		380710042BEAB9E000352E0D /* SignOutToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignOutToolbar.swift; sourceTree = "<group>"; };
+		380710062BEABA9200352E0D /* GenericTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericTitle.swift; sourceTree = "<group>"; };
 		3818FC0C2BE94ACA00543D08 /* AuthScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthScreenModel.swift; sourceTree = "<group>"; };
 		3818FC1B2BE94EA800543D08 /* EmailResentAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailResentAlert.swift; sourceTree = "<group>"; };
 		3818FC1D2BE94F2F00543D08 /* EmailSentSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailSentSheet.swift; sourceTree = "<group>"; };
@@ -131,14 +139,49 @@
 		38070FF72BEA52DD00352E0D /* Providers */ = {
 			isa = PBXGroup;
 			children = (
-				38070FF92BEA530C00352E0D /* StripePaymentProvider.swift */,
+				38070FF92BEA530C00352E0D /* PaymentSheetModel.swift */,
 			);
 			path = Providers;
+			sourceTree = "<group>";
+		};
+		38070FFC2BEAB35F00352E0D /* PlanPaymentScreen */ = {
+			isa = PBXGroup;
+			children = (
+				380710032BEAB9A300352E0D /* Toolbars */,
+				380710002BEAB94700352E0D /* Cells */,
+				38070FFD2BEAB68E00352E0D /* Alerts */,
+			);
+			path = PlanPaymentScreen;
+			sourceTree = "<group>";
+		};
+		38070FFD2BEAB68E00352E0D /* Alerts */ = {
+			isa = PBXGroup;
+			children = (
+				38070FFE2BEAB6AA00352E0D /* PaymentError.swift */,
+			);
+			path = Alerts;
+			sourceTree = "<group>";
+		};
+		380710002BEAB94700352E0D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				380710012BEAB95300352E0D /* PaymentButton.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		380710032BEAB9A300352E0D /* Toolbars */ = {
+			isa = PBXGroup;
+			children = (
+				380710042BEAB9E000352E0D /* SignOutToolbar.swift */,
+			);
+			path = Toolbars;
 			sourceTree = "<group>";
 		};
 		3818FC082BE94A7700543D08 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				38070FFC2BEAB35F00352E0D /* PlanPaymentScreen */,
 				3818FC092BE94A8900543D08 /* AuthScreen */,
 			);
 			path = Screens;
@@ -235,8 +278,6 @@
 		3818FC162BE94CE300543D08 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				3818FC182BE94D0600543D08 /* Constants */,
-				3818FC172BE94CE900543D08 /* Components */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -244,6 +285,7 @@
 		3818FC172BE94CE900543D08 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				380710062BEABA9200352E0D /* GenericTitle.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -304,7 +346,9 @@
 			children = (
 				389B17F52BE5668D006D8BEB /* Info.plist */,
 				38DB8AFE2BD77C550091008B /* AutomaApp.swift */,
+				3818FC182BE94D0600543D08 /* Constants */,
 				389B17F12BE56547006D8BEB /* Supabase.swift */,
+				3818FC172BE94CE900543D08 /* Components */,
 				3818FC082BE94A7700543D08 /* Screens */,
 				389B18002BE57774006D8BEB /* CheckoutView.swift */,
 				389B17F82BE5678E006D8BEB /* Models.swift */,
@@ -515,16 +559,20 @@
 				38070FF42BE9631300352E0D /* AuthErrorAlertIOS.swift in Sources */,
 				3818FC0D2BE94ACA00543D08 /* AuthScreenModel.swift in Sources */,
 				38DB8B012BD77C550091008B /* ContentView.swift in Sources */,
+				380710072BEABA9200352E0D /* GenericTitle.swift in Sources */,
+				380710022BEAB95300352E0D /* PaymentButton.swift in Sources */,
 				38070FF62BEA41B300352E0D /* Color.swift in Sources */,
 				389B17F22BE56547006D8BEB /* Supabase.swift in Sources */,
 				3818FC212BE952C500543D08 /* Authentication.swift in Sources */,
 				389B17F72BE56747006D8BEB /* ProfileView.swift in Sources */,
-				38070FFA2BEA530C00352E0D /* StripePaymentProvider.swift in Sources */,
+				38070FFA2BEA530C00352E0D /* PaymentSheetModel.swift in Sources */,
 				389B17FB2BE567AA006D8BEB /* AppView.swift in Sources */,
 				389B17F92BE5678E006D8BEB /* Models.swift in Sources */,
 				389B17F42BE565FD006D8BEB /* AuthScreen.swift in Sources */,
+				380710052BEAB9E000352E0D /* SignOutToolbar.swift in Sources */,
 				3818FC232BE957A100543D08 /* ExitAppToolBar.swift in Sources */,
 				389B17FD2BE56D5F006D8BEB /* AvatarImage.swift in Sources */,
+				38070FFF2BEAB6AA00352E0D /* PaymentError.swift in Sources */,
 				38DB8AFF2BD77C550091008B /* AutomaApp.swift in Sources */,
 				3818FC1E2BE94F2F00543D08 /* EmailSentSheet.swift in Sources */,
 				38070FF22BE961B300352E0D /* CloseEmailSentSheetToolBar.swift in Sources */,
