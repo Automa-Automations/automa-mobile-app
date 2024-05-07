@@ -14,7 +14,7 @@ struct AppView: View {
     var body: some View {
         Group {
             if isAuthenticated && shouldUserPayBool {
-                CheckoutView(isAuthenticated: $isAuthenticated, shouldShowPaymentScreen: $shouldUserPayBool)
+                PlanPaymentScreen(isAuthenticated: $isAuthenticated, shouldShowPaymentScreen: $shouldUserPayBool)
             } else if isAuthenticated {
                 ProfileView()
             } else {

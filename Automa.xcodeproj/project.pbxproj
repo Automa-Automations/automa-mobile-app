@@ -15,6 +15,7 @@
 		380710022BEAB95300352E0D /* PaymentButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380710012BEAB95300352E0D /* PaymentButton.swift */; };
 		380710052BEAB9E000352E0D /* SignOutToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380710042BEAB9E000352E0D /* SignOutToolbar.swift */; };
 		380710072BEABA9200352E0D /* GenericTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380710062BEABA9200352E0D /* GenericTitle.swift */; };
+		380710092BEABFA700352E0D /* PlanPaymentScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380710082BEABFA700352E0D /* PlanPaymentScreen.swift */; };
 		3818FC0D2BE94ACA00543D08 /* AuthScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3818FC0C2BE94ACA00543D08 /* AuthScreenModel.swift */; };
 		3818FC1C2BE94EA800543D08 /* EmailResentAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3818FC1B2BE94EA800543D08 /* EmailResentAlert.swift */; };
 		3818FC1E2BE94F2F00543D08 /* EmailSentSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3818FC1D2BE94F2F00543D08 /* EmailSentSheet.swift */; };
@@ -74,6 +75,7 @@
 		380710012BEAB95300352E0D /* PaymentButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentButton.swift; sourceTree = "<group>"; };
 		380710042BEAB9E000352E0D /* SignOutToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignOutToolbar.swift; sourceTree = "<group>"; };
 		380710062BEABA9200352E0D /* GenericTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericTitle.swift; sourceTree = "<group>"; };
+		380710082BEABFA700352E0D /* PlanPaymentScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanPaymentScreen.swift; sourceTree = "<group>"; };
 		3818FC0C2BE94ACA00543D08 /* AuthScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthScreenModel.swift; sourceTree = "<group>"; };
 		3818FC1B2BE94EA800543D08 /* EmailResentAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailResentAlert.swift; sourceTree = "<group>"; };
 		3818FC1D2BE94F2F00543D08 /* EmailSentSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailSentSheet.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 				380710032BEAB9A300352E0D /* Toolbars */,
 				380710002BEAB94700352E0D /* Cells */,
 				38070FFD2BEAB68E00352E0D /* Alerts */,
+				380710082BEABFA700352E0D /* PlanPaymentScreen.swift */,
 			);
 			path = PlanPaymentScreen;
 			sourceTree = "<group>";
@@ -564,6 +567,7 @@
 				38070FF62BEA41B300352E0D /* Color.swift in Sources */,
 				389B17F22BE56547006D8BEB /* Supabase.swift in Sources */,
 				3818FC212BE952C500543D08 /* Authentication.swift in Sources */,
+				380710092BEABFA700352E0D /* PlanPaymentScreen.swift in Sources */,
 				389B17F72BE56747006D8BEB /* ProfileView.swift in Sources */,
 				38070FFA2BEA530C00352E0D /* PaymentSheetModel.swift in Sources */,
 				389B17FB2BE567AA006D8BEB /* AppView.swift in Sources */,
