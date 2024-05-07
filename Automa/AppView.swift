@@ -14,7 +14,7 @@ struct AppView: View {
     var body: some View {
         Group {
             if isAuthenticated && shouldUserPayBool {
-                Text("Pay View")
+                CheckoutView(isAuthenticated: $isAuthenticated, shouldShowPaymentScreen: $shouldUserPayBool)
             } else if isAuthenticated {
                 ProfileView()
             } else {
@@ -47,6 +47,10 @@ struct AppView: View {
                 .value
 
             let currentTimeStamp = Int(Date().timeIntervalSince1970)
+            if profile.expiryDate == -1 {
+                return false
+            }
+            
             if profile.expiryDate < currentTimeStamp {
                 return true
             }

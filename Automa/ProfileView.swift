@@ -58,7 +58,6 @@ struct ProfileView: View {
           }
         }
             
-        CheckoutView()
       }
       .navigationTitle("Profile")
       .toolbar(content: {
@@ -120,7 +119,8 @@ struct ProfileView: View {
           fullName: fullName,
           website: website,
           avatarURL: imageURL,
-          expiryDate: Int(Date().timeIntervalSince1970 + 100000)
+          expiryDate: Int(Date().timeIntervalSince1970 + 100000),
+          stripeCustomerId: ""
         )
 
         try await supabase.database

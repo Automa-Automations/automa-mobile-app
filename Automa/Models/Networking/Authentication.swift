@@ -20,3 +20,15 @@ func signIn(email: String, signInAction: @escaping (Bool, String) -> Void) {
         }
     }
 }
+
+func signOut(signOutAction: @escaping (Bool, String) -> Void) {
+    Task {
+        do {
+            try await supabase.auth.signOut()
+            signOutAction(true, "Successfully Signed Out")
+        } catch {
+            signOutAction(false, error.localizedDescription)
+        }
+    }
+}
+

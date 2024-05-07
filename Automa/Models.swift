@@ -24,6 +24,7 @@ struct Profile: Codable {
   let website: String?
   let avatarURL: String?
   let expiryDate: Int
+    let stripeCustomerId: String?
 
   enum CodingKeys: String, CodingKey {
     case username
@@ -31,5 +32,6 @@ struct Profile: Codable {
     case website
     case avatarURL = "avatar_url"
     case expiryDate
+    case stripeCustomerId
   }
 }
