@@ -10,7 +10,7 @@ import Foundation
 import Supabase
 import SwiftUI
 
-struct AuthView: View {
+struct AuthScreen: View {
     @State var email = ""
     @State var isLoading = false
     @State var showPopover = false
@@ -121,5 +121,5 @@ struct AuthView: View {
 }
 
 #Preview {
-    AuthView()
+    AuthScreen()
 }

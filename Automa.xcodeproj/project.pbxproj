@@ -16,7 +16,7 @@
 		3818FC232BE957A100543D08 /* ExitAppToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3818FC222BE957A100543D08 /* ExitAppToolBar.swift */; };
 		389B17F02BE5652B006D8BEB /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = 389B17EF2BE5652B006D8BEB /* Supabase */; };
 		389B17F22BE56547006D8BEB /* Supabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389B17F12BE56547006D8BEB /* Supabase.swift */; };
-		389B17F42BE565FD006D8BEB /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389B17F32BE565FD006D8BEB /* AuthView.swift */; };
+		389B17F42BE565FD006D8BEB /* AuthScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389B17F32BE565FD006D8BEB /* AuthScreen.swift */; };
 		389B17F72BE56747006D8BEB /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389B17F62BE56747006D8BEB /* ProfileView.swift */; };
 		389B17F92BE5678E006D8BEB /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389B17F82BE5678E006D8BEB /* Models.swift */; };
 		389B17FB2BE567AA006D8BEB /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389B17FA2BE567AA006D8BEB /* AppView.swift */; };
@@ -68,7 +68,7 @@
 		3818FC202BE952C500543D08 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		3818FC222BE957A100543D08 /* ExitAppToolBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExitAppToolBar.swift; sourceTree = "<group>"; };
 		389B17F12BE56547006D8BEB /* Supabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Supabase.swift; sourceTree = "<group>"; };
-		389B17F32BE565FD006D8BEB /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
+		389B17F32BE565FD006D8BEB /* AuthScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthScreen.swift; sourceTree = "<group>"; };
 		389B17F52BE5668D006D8BEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		389B17F62BE56747006D8BEB /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		389B17F82BE5678E006D8BEB /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
@@ -141,6 +141,7 @@
 				3818FC0B2BE94A9800543D08 /* Sheets */,
 				3818FC0A2BE94A9300543D08 /* Toolbars */,
 				3818FC0C2BE94ACA00543D08 /* AuthScreenModel.swift */,
+				389B17F32BE565FD006D8BEB /* AuthScreen.swift */,
 			);
 			path = AuthScreen;
 			sourceTree = "<group>";
@@ -291,7 +292,6 @@
 				38DB8AFE2BD77C550091008B /* AutomaApp.swift */,
 				389B17F12BE56547006D8BEB /* Supabase.swift */,
 				3818FC082BE94A7700543D08 /* Screens */,
-				389B17F32BE565FD006D8BEB /* AuthView.swift */,
 				389B18002BE57774006D8BEB /* CheckoutView.swift */,
 				389B17F82BE5678E006D8BEB /* Models.swift */,
 				389B17FA2BE567AA006D8BEB /* AppView.swift */,
@@ -506,7 +506,7 @@
 				389B17F72BE56747006D8BEB /* ProfileView.swift in Sources */,
 				389B17FB2BE567AA006D8BEB /* AppView.swift in Sources */,
 				389B17F92BE5678E006D8BEB /* Models.swift in Sources */,
-				389B17F42BE565FD006D8BEB /* AuthView.swift in Sources */,
+				389B17F42BE565FD006D8BEB /* AuthScreen.swift in Sources */,
 				3818FC232BE957A100543D08 /* ExitAppToolBar.swift in Sources */,
 				389B17FD2BE56D5F006D8BEB /* AvatarImage.swift in Sources */,
 				38DB8AFF2BD77C550091008B /* AutomaApp.swift in Sources */,

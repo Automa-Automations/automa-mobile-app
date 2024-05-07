@@ -14,9 +14,7 @@ struct ProfileView: View {
   @State var username = ""
   @State var fullName = ""
   @State var website = ""
-
   @State var isLoading = false
-
  @State var imageSelection: PhotosPickerItem?
  @State var avatarImage: AvatarImage?
 
@@ -121,7 +119,8 @@ struct ProfileView: View {
           username: username,
           fullName: fullName,
           website: website,
-          avatarURL: imageURL
+          avatarURL: imageURL,
+          expiryDate: Int(Date().timeIntervalSince1970 + 100000)
         )
 
         try await supabase.database
