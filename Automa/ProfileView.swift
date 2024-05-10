@@ -119,8 +119,8 @@ struct ProfileView: View {
           fullName: fullName,
           website: website,
           avatarURL: imageURL,
-          expiryDate: Int(Date().timeIntervalSince1970 + 100000),
-          stripeCustomerId: ""
+          expiry_date: Date(),
+          stripe_customer_id: ""
         )
 
         try await supabase.database

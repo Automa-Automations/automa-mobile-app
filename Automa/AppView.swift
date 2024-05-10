@@ -10,15 +10,20 @@ import SwiftUI
 struct AppView: View {
     @State var isAuthenticated = false
     @State var shouldUserPayBool = false
+    @State var hasAppLoaded = false
 
     var body: some View {
         Group {
-            if isAuthenticated && shouldUserPayBool {
-                PlanPaymentScreen(isAuthenticated: $isAuthenticated, shouldShowPaymentScreen: $shouldUserPayBool)
-            } else if isAuthenticated {
-                ProfileView()
+            if !hasAppLoaded {
+                ProgressView()
             } else {
-                AuthScreen()
+                if isAuthenticated && shouldUserPayBool {
+                    PlanPaymentScreen(isAuthenticated: $isAuthenticated, shouldShowPaymentScreen: $shouldUserPayBool)
+                } else if isAuthenticated {
+                    ProfileView()
+                } else {
+                    AuthScreen()
+                }
             }
         }
         .task {
@@ -28,6 +33,7 @@ struct AppView: View {
                     if isAuthenticated {
                         shouldUserPayBool = await shouldUserPay()
                     }
+                    hasAppLoaded = true
                 }
             }
         }
@@ -46,12 +52,12 @@ struct AppView: View {
                 .execute()
                 .value
 
-            let currentTimeStamp = Int(Date().timeIntervalSince1970)
-            if profile.expiryDate == -1 {
+            let currentTimeStamp = Date().timeIntervalSince1970
+            if profile.expiry_date == nil {
                 return false
             }
             
-            if profile.expiryDate < currentTimeStamp {
+            if profile.expiry_date?.timeIntervalSince1970 ?? Double(0.0) < currentTimeStamp {
                 return true
             }
 

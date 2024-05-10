@@ -10,7 +10,7 @@ import StripePaymentSheet
 import SwiftUI
 
 class PaymentSheetModel: ObservableObject {
-    let backendCheckoutUrl = URL(string: "http://localhost:4242/payment-sheet")! // Your backend endpoint
+    let backendCheckoutUrl = URL(string: "https://ia4csru8sj.execute-api.us-east-1.amazonaws.com/prod/payment-sheet")! // Your backend endpoint
     @Published var paymentSheet: PaymentSheet?
 //    @Published var paymentSheets: [PaymentSheet?]  So that we can have all the payment sheets for all the subscriptions
     @Published var paymentResult: PaymentSheetResult?
@@ -19,7 +19,7 @@ class PaymentSheetModel: ObservableObject {
         // Define your JSON data
         let currentUser = try! await supabase.auth.session.user.id
         let jsonData: [String: Any] = [
-            "priceId": payment,
+            "planId": payment,
             "userId": currentUser.uuidString
             
         ]
@@ -34,6 +34,7 @@ class PaymentSheetModel: ObservableObject {
         request.httpMethod = "POST"
         request.httpBody = jsonData // Set JSON data as the request body
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.setValue("X-API-Key", forHTTPHeaderField: "302e5a68-1bbe-4cbf-9a73-ef82ee441ba3")
         
         let task = URLSession.shared.dataTask(with: request, completionHandler: { [weak self] data, _, error in
             guard let data = data,

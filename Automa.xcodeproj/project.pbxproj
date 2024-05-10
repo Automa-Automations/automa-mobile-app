@@ -29,7 +29,6 @@
 		389B17FB2BE567AA006D8BEB /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389B17FA2BE567AA006D8BEB /* AppView.swift */; };
 		389B17FD2BE56D5F006D8BEB /* AvatarImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389B17FC2BE56D5F006D8BEB /* AvatarImage.swift */; };
 		389B17FF2BE576BE006D8BEB /* StripePaymentSheet in Frameworks */ = {isa = PBXBuildFile; productRef = 389B17FE2BE576BE006D8BEB /* StripePaymentSheet */; };
-		389B18012BE57774006D8BEB /* CheckoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389B18002BE57774006D8BEB /* CheckoutView.swift */; };
 		38DB8AFF2BD77C550091008B /* AutomaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DB8AFE2BD77C550091008B /* AutomaApp.swift */; };
 		38DB8B012BD77C550091008B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DB8B002BD77C550091008B /* ContentView.swift */; };
 		38DB8B032BD77C580091008B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38DB8B022BD77C580091008B /* Assets.xcassets */; };
@@ -88,7 +87,6 @@
 		389B17F82BE5678E006D8BEB /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		389B17FA2BE567AA006D8BEB /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
 		389B17FC2BE56D5F006D8BEB /* AvatarImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarImage.swift; sourceTree = "<group>"; };
-		389B18002BE57774006D8BEB /* CheckoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutView.swift; sourceTree = "<group>"; };
 		38DB8AFB2BD77C550091008B /* Automa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Automa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38DB8AFE2BD77C550091008B /* AutomaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutomaApp.swift; sourceTree = "<group>"; };
 		38DB8B002BD77C550091008B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -353,7 +351,6 @@
 				389B17F12BE56547006D8BEB /* Supabase.swift */,
 				3818FC172BE94CE900543D08 /* Components */,
 				3818FC082BE94A7700543D08 /* Screens */,
-				389B18002BE57774006D8BEB /* CheckoutView.swift */,
 				389B17F82BE5678E006D8BEB /* Models.swift */,
 				389B17FA2BE567AA006D8BEB /* AppView.swift */,
 				3818FC112BE94BED00543D08 /* Models */,
@@ -580,7 +577,6 @@
 				38DB8AFF2BD77C550091008B /* AutomaApp.swift in Sources */,
 				3818FC1E2BE94F2F00543D08 /* EmailSentSheet.swift in Sources */,
 				38070FF22BE961B300352E0D /* CloseEmailSentSheetToolBar.swift in Sources */,
-				389B18012BE57774006D8BEB /* CheckoutView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
