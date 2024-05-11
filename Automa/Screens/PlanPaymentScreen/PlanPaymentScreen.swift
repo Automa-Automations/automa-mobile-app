@@ -9,7 +9,6 @@ import Foundation
 import StripePaymentSheet
 import SwiftUI
 
-let hexColors: [UInt] = [0xFF5733, 0x33FF57, 0x5733FF, 0x33FFFF, 0xFFFF33]
 
 struct PlanPaymentScreen: View {
     @ObservedObject var model = PaymentSheetModel()
