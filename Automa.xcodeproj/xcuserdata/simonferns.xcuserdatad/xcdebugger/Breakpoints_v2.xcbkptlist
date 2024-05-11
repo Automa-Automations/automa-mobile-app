@@ -24,7 +24,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "527DAAEF-D6E7-4A4B-8BB5-1E85C4F0BA37"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Automa/Models/Providers/PaymentSheetModel.swift"
@@ -32,73 +32,15 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "20"
             endingLineNumber = "20"
-            landmarkName = "PaymentSheetModel"
-            landmarkType = "3">
-            <Locations>
-               <Location
-                  uuid = "527DAAEF-D6E7-4A4B-8BB5-1E85C4F0BA37 - d0c4d54caa1e9c6f"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(1) suspend resume partial function for Automa.PaymentSheetModel.preparePaymentSheet(view: __C.UIViewController, payment: Swift.String, completion: (Swift.String, Swift.Bool) async -&gt; ()) async -&gt; ()"
-                  moduleName = "Automa"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/simonferns/Programming/Automa/automa-mobile-app/Automa/Models/Providers/PaymentSheetModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "20"
-                  endingLineNumber = "20">
-               </Location>
-               <Location
-                  uuid = "527DAAEF-D6E7-4A4B-8BB5-1E85C4F0BA37 - 6be8926801598f88"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(2) await resume partial function for Automa.PaymentSheetModel.preparePaymentSheet(view: __C.UIViewController, payment: Swift.String, completion: (Swift.String, Swift.Bool) async -&gt; ()) async -&gt; ()"
-                  moduleName = "Automa"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/simonferns/Programming/Automa/automa-mobile-app/Automa/Models/Providers/PaymentSheetModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "33"
-                  endingLineNumber = "33">
-               </Location>
-               <Location
-                  uuid = "527DAAEF-D6E7-4A4B-8BB5-1E85C4F0BA37 - 230ddb1f1f9a5936"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for Automa.PaymentSheetModel.preparePaymentSheet(view: __C.UIViewController, payment: Swift.String, completion: (Swift.String, Swift.Bool) async -&gt; ()) async -&gt; ()"
-                  moduleName = "Automa"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/simonferns/Programming/Automa/automa-mobile-app/Automa/Models/Providers/PaymentSheetModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "33"
-                  endingLineNumber = "33">
-               </Location>
-               <Location
-                  uuid = "527DAAEF-D6E7-4A4B-8BB5-1E85C4F0BA37 - 45b161f7d6d7ffb5"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(4) suspend resume partial function for Automa.PaymentSheetModel.preparePaymentSheet(view: __C.UIViewController, payment: Swift.String, completion: (Swift.String, Swift.Bool) async -&gt; ()) async -&gt; ()"
-                  moduleName = "Automa"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/simonferns/Programming/Automa/automa-mobile-app/Automa/Models/Providers/PaymentSheetModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "33"
-                  endingLineNumber = "33">
-               </Location>
-            </Locations>
+            landmarkName = "preparePaymentSheet(view:payment:completion:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "7EB0F73D-2916-45CA-AE17-B36DF27E0763"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Automa/Models/Providers/PaymentSheetModel.swift"
@@ -108,43 +50,13 @@
             endingLineNumber = "65"
             landmarkName = "preparePaymentSheet(view:payment:completion:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "7EB0F73D-2916-45CA-AE17-B36DF27E0763 - 87f31d6f1d6b9aec"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "function signature specialization &lt;Arg[1] = Value Promoted from Box&gt; of closure #1 @Swift.MainActor @Sendable () -&gt; () in closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Automa.PaymentSheetModel.preparePaymentSheet(view: __C.UIViewController, payment: Swift.String, completion: (Swift.String, Swift.Bool) async -&gt; ()) async -&gt; ()"
-                  moduleName = "Automa"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/simonferns/Programming/Automa/automa-mobile-app/Automa/Models/Providers/PaymentSheetModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "65"
-                  endingLineNumber = "65">
-               </Location>
-               <Location
-                  uuid = "7EB0F73D-2916-45CA-AE17-B36DF27E0763 - 59d278520c2ab20a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (StripePaymentSheet.PaymentSheetResult) -&gt; () in closure #1 @Swift.MainActor @Sendable () -&gt; () in closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Automa.PaymentSheetModel.preparePaymentSheet(view: __C.UIViewController, payment: Swift.String, completion: (Swift.String, Swift.Bool) async -&gt; ()) async -&gt; ()"
-                  moduleName = "Automa"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/simonferns/Programming/Automa/automa-mobile-app/Automa/Models/Providers/PaymentSheetModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "65"
-                  endingLineNumber = "65">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "B4712A0E-31FD-4988-8B45-D2418B1ABFDB"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Automa/Models/Providers/PaymentSheetModel.swift"
@@ -154,6 +66,174 @@
             endingLineNumber = "63"
             landmarkName = "preparePaymentSheet(view:payment:completion:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9F5161D3-3CF5-46DA-9958-72E170F9FDEE"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Automa/Screens/PlanPaymentScreen/PlanPaymentScreen.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BF6B795B-88BB-472E-BBF8-04C96DC5CDAD"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Automa/Screens/PlanPaymentScreen/PlanPaymentScreen.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "99"
+            endingLineNumber = "99"
+            landmarkName = "fetchAllPlans()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "BF6B795B-88BB-472E-BBF8-04C96DC5CDAD - 1c78eb6db132b671"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for Automa.PlanPaymentScreen.fetchAllPlans() async throws -&gt; Swift.Array&lt;Automa.PlanItem&gt;"
+                  moduleName = "Automa"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/simonferns/Programming/Automa/automa-mobile-app/Automa/Screens/PlanPaymentScreen/PlanPaymentScreen.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "99"
+                  endingLineNumber = "99">
+               </Location>
+               <Location
+                  uuid = "BF6B795B-88BB-472E-BBF8-04C96DC5CDAD - 3e467ab01540145a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for Automa.PlanPaymentScreen.fetchAllPlans() async throws -&gt; Swift.Array&lt;Automa.PlanItem&gt;"
+                  moduleName = "Automa"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/simonferns/Programming/Automa/automa-mobile-app/Automa/Screens/PlanPaymentScreen/PlanPaymentScreen.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "99"
+                  endingLineNumber = "99">
+               </Location>
+               <Location
+                  uuid = "BF6B795B-88BB-472E-BBF8-04C96DC5CDAD - 71ea3fc9df1dfa77"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for Automa.PlanPaymentScreen.fetchAllPlans() async throws -&gt; Swift.Array&lt;Automa.PlanItem&gt;"
+                  moduleName = "Automa"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/simonferns/Programming/Automa/automa-mobile-app/Automa/Screens/PlanPaymentScreen/PlanPaymentScreen.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "99"
+                  endingLineNumber = "99">
+               </Location>
+               <Location
+                  uuid = "BF6B795B-88BB-472E-BBF8-04C96DC5CDAD - 3fd5299808095874"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for Automa.PlanPaymentScreen.fetchAllPlans() async throws -&gt; Swift.Array&lt;Automa.PlanItem&gt;"
+                  moduleName = "Automa"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/simonferns/Programming/Automa/automa-mobile-app/Automa/Screens/PlanPaymentScreen/PlanPaymentScreen.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "99"
+                  endingLineNumber = "99">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5BEC59AD-4C06-44BB-854C-9A177D73E0E7"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Automa/Screens/PlanPaymentScreen/PlanPaymentScreen.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
+            landmarkName = "fetchAllPlans()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "97DD2038-7165-408C-B514-C76F09B3B8C7"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Automa/Screens/PlanPaymentScreen/PlanPaymentScreen.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
+            landmarkName = "fetchAllPlans()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "97DD2038-7165-408C-B514-C76F09B3B8C7 - 71ea3fc9df1dfa29"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for Automa.PlanPaymentScreen.fetchAllPlans() async throws -&gt; Swift.Array&lt;Automa.PlanItem&gt;"
+                  moduleName = "Automa"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/simonferns/Programming/Automa/automa-mobile-app/Automa/Screens/PlanPaymentScreen/PlanPaymentScreen.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "101"
+                  endingLineNumber = "101">
+               </Location>
+               <Location
+                  uuid = "97DD2038-7165-408C-B514-C76F09B3B8C7 - bad4796829144406"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Automa.PlanItem, Automa.PlanItem) -&gt; Swift.Bool in Automa.PlanPaymentScreen.fetchAllPlans() async throws -&gt; Swift.Array&lt;Automa.PlanItem&gt;"
+                  moduleName = "Automa"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/simonferns/Programming/Automa/automa-mobile-app/Automa/Screens/PlanPaymentScreen/PlanPaymentScreen.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "101"
+                  endingLineNumber = "101">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "34D265CB-8BFD-46E8-8CE3-AAEB8BE34BC3"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Automa/Models/Providers/PaymentSheetModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "PaymentSheetModel"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

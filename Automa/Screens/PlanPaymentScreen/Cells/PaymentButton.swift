@@ -30,7 +30,6 @@ struct PaymentButton: View {
                 }
             }
         }) {
-            // Your button content
             HStack {
                 Text(title.uppercased())
                     .font(.title)

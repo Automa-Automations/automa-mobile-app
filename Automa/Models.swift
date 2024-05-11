@@ -35,3 +35,14 @@ struct Profile: Codable {
     case stripe_customer_id
   }
 }
+
+
+struct PlanItem: Identifiable, Decodable {
+    let id: String
+    let created_at: Date
+    let price: Float
+    let price_rep: String
+    let base_credits: Int
+    let name: String
+    let popularity_score: Int
+}
