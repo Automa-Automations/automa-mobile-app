@@ -38,7 +38,7 @@ struct PlanPaymentScreen: View {
 
                                     VStack {
                                         VStack {
-                                            Text("Most Popular").padding(.all, 8).padding(.horizontal, 12)
+                                            Text("Most Popular").padding(.all, 7).padding(.horizontal, 10)
                                         }
                                         .background(Color(hex: 0x404151))
                                         .cornerRadius(10)
@@ -51,10 +51,8 @@ struct PlanPaymentScreen: View {
                                 }
 
                                 ForEach(plans[1...]) { plan in
-                                            let randomIndex = Int.random(in: 0..<hexColors.count)
-                                            let randomColor = hexColors[randomIndex]
-                                            PaymentButton(model: model, setPaymentBool: setPaymentBool, showErrorDialog: showErrorDialog, paymentType: plan.id, title: plan.name, price: plan.price_rep, backgroundColor: randomColor)
-                                        }
+                                    PaymentButton(model: model, setPaymentBool: setPaymentBool, showErrorDialog: showErrorDialog, paymentType: plan.id, title: plan.name, price: plan.price_rep, backgroundColor: UInt(plan.hex_color_int))
+                                    }
                             }
 
                         }.tint(.white)

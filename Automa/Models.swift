@@ -45,4 +45,5 @@ struct PlanItem: Identifiable, Decodable {
     let base_credits: Int
     let name: String
     let popularity_score: Int
+    let hex_color_int: Int
 }
