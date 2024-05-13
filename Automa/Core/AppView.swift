@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+
 struct AppView: View {
     @State var isAuthenticated = false
     @State var shouldUserPayBool = false
@@ -56,7 +57,7 @@ struct AppView: View {
             if profile.expiry_date == nil {
                 return false
             }
-            
+
             if profile.expiry_date?.timeIntervalSince1970 ?? Double(0.0) < currentTimeStamp {
                 return true
             }

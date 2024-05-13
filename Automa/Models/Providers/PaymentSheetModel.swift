@@ -20,22 +20,21 @@ class PaymentSheetModel: ObservableObject {
         let currentUser = try! await supabase.auth.session.user.id
         let jsonData: [String: Any] = [
             "planId": payment,
-            "userId": currentUser.uuidString
-            
+            "userId": currentUser.uuidString,
         ]
-        
+
         // Serialize JSON data
         guard let jsonData = try? JSONSerialization.data(withJSONObject: jsonData) else {
             print("Error serializing JSON data")
             return
         }
-        
+
         var request = URLRequest(url: backendCheckoutUrl)
         request.httpMethod = "POST"
         request.httpBody = jsonData // Set JSON data as the request body
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.setValue("X-API-Key", forHTTPHeaderField: "302e5a68-1bbe-4cbf-9a73-ef82ee441ba3")
-        
+
         let task = URLSession.shared.dataTask(with: request, completionHandler: { [weak self] data, _, error in
             guard let data = data,
                   let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any],
@@ -43,7 +42,8 @@ class PaymentSheetModel: ObservableObject {
                   let customerEphemeralKeySecret = json["ephemeralKey"] as? String,
                   let paymentIntentClientSecret = json["paymentIntent"] as? String,
                   let publishableKey = json["publishableKey"] as? String,
-                  let self = self else {
+                  let self = self
+            else {
                 print(error ?? "No Error")
                 return
             }
@@ -73,7 +73,7 @@ class PaymentSheetModel: ObservableObject {
                         Task {
                             await completion("You have cancelled the transaction 😔", false)
                         }
-                    case .failed(let error):
+                    case let .failed(error):
                         Task {
                             await completion("Payment failed with error: \(error.localizedDescription)", false)
                         }
@@ -83,7 +83,6 @@ class PaymentSheetModel: ObservableObject {
         })
         task.resume()
     }
-
 
     func onPaymentCompletion(result: PaymentSheetResult) {
         paymentResult = result

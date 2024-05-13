@@ -31,4 +31,3 @@ func signOut(signOutAction: @escaping (Bool, String) -> Void) {
         }
     }
 }
-
