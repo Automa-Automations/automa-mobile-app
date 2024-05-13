@@ -114,36 +114,6 @@
             endingLineNumber = "97"
             landmarkName = "fetchAllPlans()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "5BEC59AD-4C06-44BB-854C-9A177D73E0E7 - 71ea3fc9df1dfab5"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for Automa.PlanPaymentScreen.fetchAllPlans() async throws -&gt; Swift.Array&lt;Automa.PlanItem&gt;"
-                  moduleName = "Automa"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/simonferns/Programming/Automa/automa-mobile-app/Automa/Screens/PlanPaymentScreen/PlanPaymentScreen.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "97"
-                  endingLineNumber = "97">
-               </Location>
-               <Location
-                  uuid = "5BEC59AD-4C06-44BB-854C-9A177D73E0E7 - bad479682914449a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Automa.PlanItem, Automa.PlanItem) -&gt; Swift.Bool in Automa.PlanPaymentScreen.fetchAllPlans() async throws -&gt; Swift.Array&lt;Automa.PlanItem&gt;"
-                  moduleName = "Automa"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/simonferns/Programming/Automa/automa-mobile-app/Automa/Screens/PlanPaymentScreen/PlanPaymentScreen.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "97"
-                  endingLineNumber = "97">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

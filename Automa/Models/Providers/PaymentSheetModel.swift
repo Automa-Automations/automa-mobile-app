@@ -10,7 +10,7 @@ import StripePaymentSheet
 import SwiftUI
 
 class PaymentSheetModel: ObservableObject {
-    let backendCheckoutUrl = URL(string: "https://nyhb6pk924.execute-api.us-east-1.amazonaws.com/prod/payment-sheet")! // Your backend endpoint
+    let backendCheckoutUrl = URL(string: "https://nyhb6pk924.execute-api.us-east-1.amazonaws.com/prod/stripe/payment-sheet")! // Your backend endpoint
     @Published var paymentSheet: PaymentSheet?
 //    @Published var paymentSheets: [PaymentSheet?]  So that we can have all the payment sheets for all the subscriptions
     @Published var paymentResult: PaymentSheetResult?
