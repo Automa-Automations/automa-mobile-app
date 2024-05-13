@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		38070FF22BE961B300352E0D /* CloseEmailSentSheetToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38070FF12BE961B300352E0D /* CloseEmailSentSheetToolBar.swift */; };
 		38070FF42BE9631300352E0D /* AuthErrorAlertIOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38070FF32BE9631300352E0D /* AuthErrorAlertIOS.swift */; };
-		38070FF62BEA41B300352E0D /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38070FF52BEA41B300352E0D /* Color.swift */; };
 		38070FFA2BEA530C00352E0D /* PaymentSheetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38070FF92BEA530C00352E0D /* PaymentSheetModel.swift */; };
 		38070FFF2BEAB6AA00352E0D /* PaymentError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38070FFE2BEAB6AA00352E0D /* PaymentError.swift */; };
 		380710022BEAB95300352E0D /* PaymentButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380710012BEAB95300352E0D /* PaymentButton.swift */; };
@@ -26,6 +25,7 @@
 		38201DFE2BF1EA99003AE77C /* AvatarImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38201DFD2BF1EA99003AE77C /* AvatarImage.swift */; };
 		38201E002BF1EAB8003AE77C /* TransferError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38201DFF2BF1EAB8003AE77C /* TransferError.swift */; };
 		38201E022BF1EAD7003AE77C /* AvatarImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38201E012BF1EAD7003AE77C /* AvatarImageExtension.swift */; };
+		38201E042BF1ECDC003AE77C /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38201E032BF1ECDC003AE77C /* Color.swift */; };
 		389B17F02BE5652B006D8BEB /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = 389B17EF2BE5652B006D8BEB /* Supabase */; };
 		389B17F22BE56547006D8BEB /* Supabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389B17F12BE56547006D8BEB /* Supabase.swift */; };
 		389B17F42BE565FD006D8BEB /* AuthScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389B17F32BE565FD006D8BEB /* AuthScreen.swift */; };
@@ -70,7 +70,6 @@
 /* Begin PBXFileReference section */
 		38070FF12BE961B300352E0D /* CloseEmailSentSheetToolBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseEmailSentSheetToolBar.swift; sourceTree = "<group>"; };
 		38070FF32BE9631300352E0D /* AuthErrorAlertIOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthErrorAlertIOS.swift; sourceTree = "<group>"; };
-		38070FF52BEA41B300352E0D /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Color.swift; path = ../../../../../../Documents/Color.swift; sourceTree = "<group>"; };
 		38070FF92BEA530C00352E0D /* PaymentSheetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentSheetModel.swift; sourceTree = "<group>"; };
 		38070FFE2BEAB6AA00352E0D /* PaymentError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PaymentError.swift; path = ../../../../../../../../../Applications/PaymentError.swift; sourceTree = "<group>"; };
 		380710012BEAB95300352E0D /* PaymentButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentButton.swift; sourceTree = "<group>"; };
@@ -87,6 +86,7 @@
 		38201DFD2BF1EA99003AE77C /* AvatarImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarImage.swift; sourceTree = "<group>"; };
 		38201DFF2BF1EAB8003AE77C /* TransferError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferError.swift; sourceTree = "<group>"; };
 		38201E012BF1EAD7003AE77C /* AvatarImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarImageExtension.swift; sourceTree = "<group>"; };
+		38201E032BF1ECDC003AE77C /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		389B17F12BE56547006D8BEB /* Supabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Supabase.swift; sourceTree = "<group>"; };
 		389B17F32BE565FD006D8BEB /* AuthScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthScreen.swift; sourceTree = "<group>"; };
 		389B17F52BE5668D006D8BEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -233,7 +233,7 @@
 		3818FC0F2BE94BDE00543D08 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				38070FF52BEA41B300352E0D /* Color.swift */,
+				38201E032BF1ECDC003AE77C /* Color.swift */,
 				38201E012BF1EAD7003AE77C /* AvatarImageExtension.swift */,
 			);
 			path = Extensions;
@@ -567,7 +567,6 @@
 				3818FC0D2BE94ACA00543D08 /* AuthScreenModel.swift in Sources */,
 				380710072BEABA9200352E0D /* GenericTitle.swift in Sources */,
 				380710022BEAB95300352E0D /* PaymentButton.swift in Sources */,
-				38070FF62BEA41B300352E0D /* Color.swift in Sources */,
 				389B17F22BE56547006D8BEB /* Supabase.swift in Sources */,
 				3818FC212BE952C500543D08 /* Authentication.swift in Sources */,
 				38201E022BF1EAD7003AE77C /* AvatarImageExtension.swift in Sources */,
@@ -579,6 +578,7 @@
 				389B17F42BE565FD006D8BEB /* AuthScreen.swift in Sources */,
 				38201DFA2BF1E9EB003AE77C /* PlanItem.swift in Sources */,
 				380710052BEAB9E000352E0D /* SignOutToolbar.swift in Sources */,
+				38201E042BF1ECDC003AE77C /* Color.swift in Sources */,
 				3818FC232BE957A100543D08 /* ExitAppToolBar.swift in Sources */,
 				38070FFF2BEAB6AA00352E0D /* PaymentError.swift in Sources */,
 				38DB8AFF2BD77C550091008B /* AutomaApp.swift in Sources */,
