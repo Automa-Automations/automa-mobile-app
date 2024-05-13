@@ -92,7 +92,7 @@ struct PlanPaymentScreen: View {
 
     func fetchAllPlans() async throws -> [PlanItem] {
         do {
-            let items: [PlanItem] = try await supabase.database.from("plans").select().execute().value
+            let items: [PlanItem] = try await supabase_().database.from("plans").select().execute().value
             isPlansLoading = false
             return items.sorted { lhs, rhs -> Bool in
                 lhs.popularity_score > rhs.popularity_score

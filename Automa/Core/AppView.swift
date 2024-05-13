@@ -28,24 +28,30 @@ struct AppView: View {
             }
         }
         .task {
-            for await state in await supabase.auth.authStateChanges {
-                if [.initialSession, .signedIn, .signedOut].contains(state.event) {
-                    isAuthenticated = state.session != nil
-                    if isAuthenticated {
-                        shouldUserPayBool = await shouldUserPay()
+            do {
+                
+                
+                for await state in await supabase_().auth.authStateChanges {
+                    if [.initialSession, .signedIn, .signedOut].contains(state.event) {
+                        isAuthenticated = state.session != nil
+                        if isAuthenticated {
+                            shouldUserPayBool = await shouldUserPay()
+                        }
+                        hasAppLoaded = true
                     }
-                    hasAppLoaded = true
                 }
+            } catch {
+                print("Error configuring Supabase: \(error)")
             }
         }
     }
 
     func shouldUserPay() async -> Bool {
         do {
-            let currentUser = try await supabase.auth.session.user
+            let currentUser = try await supabase_().auth.session.user
             let userId = currentUser.id
 
-            let profile: Profile = try await supabase.database
+            let profile: Profile = try await supabase_().database
                 .from("profiles")
                 .select()
                 .eq("id", value: userId)

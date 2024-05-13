@@ -10,14 +10,14 @@ import StripePaymentSheet
 import SwiftUI
 
 class PaymentSheetModel: ObservableObject {
-    let backendCheckoutUrl = URL(string: "https://nyhb6pk924.execute-api.us-east-1.amazonaws.com/prod/stripe/payment-sheet")! // Your backend endpoint
+    let backendCheckoutUrl = URL(string: "\(apiBaseUrl)/stripe/payment-sheet")! // Your backend endpoint
     @Published var paymentSheet: PaymentSheet?
 //    @Published var paymentSheets: [PaymentSheet?]  So that we can have all the payment sheets for all the subscriptions
     @Published var paymentResult: PaymentSheetResult?
 
     func preparePaymentSheet(view: UIViewController, payment: String, completion: @escaping (String, Bool) async -> Void) async {
         // Define your JSON data
-        let currentUser = try! await supabase.auth.session.user.id
+        let currentUser = try! await supabase_().auth.session.user.id
         let jsonData: [String: Any] = [
             "planId": payment,
             "userId": currentUser.uuidString,

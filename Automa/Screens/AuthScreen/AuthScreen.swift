@@ -63,7 +63,7 @@ struct AuthScreen: View {
                 .onOpenURL(perform: { url in
                     Task {
                         do {
-                            try await supabase.auth.session(from: url)
+                            try await supabase_().auth.session(from: url)
                         } catch {
                             showAlertDialog(isError: true, inputMessage: error.localizedDescription)
                         }

@@ -10,7 +10,7 @@ import Foundation
 func signIn(email: String, signInAction: @escaping (Bool, String) -> Void) {
     Task {
         do {
-            try await supabase.auth.signInWithOTP(
+            try await supabase_().auth.signInWithOTP(
                 email: email,
                 redirectTo: URL(string: "com.simonferns.automa://login-callback")
             )
@@ -24,7 +24,7 @@ func signIn(email: String, signInAction: @escaping (Bool, String) -> Void) {
 func signOut(signOutAction: @escaping (Bool, String) -> Void) {
     Task {
         do {
-            try await supabase.auth.signOut()
+            try await supabase_().auth.signOut()
             signOutAction(true, "Successfully Signed Out")
         } catch {
             signOutAction(false, error.localizedDescription)

@@ -26,6 +26,8 @@
 		38201E002BF1EAB8003AE77C /* TransferError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38201DFF2BF1EAB8003AE77C /* TransferError.swift */; };
 		38201E022BF1EAD7003AE77C /* AvatarImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38201E012BF1EAD7003AE77C /* AvatarImageExtension.swift */; };
 		38201E042BF1ECDC003AE77C /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38201E032BF1ECDC003AE77C /* Color.swift */; };
+		38209EAE2BF203F400A8B4AE /* AutoConfigure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38209EAD2BF203F400A8B4AE /* AutoConfigure.swift */; };
+		38209EB02BF204F200A8B4AE /* Urls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38209EAF2BF204F200A8B4AE /* Urls.swift */; };
 		389B17F02BE5652B006D8BEB /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = 389B17EF2BE5652B006D8BEB /* Supabase */; };
 		389B17F22BE56547006D8BEB /* Supabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389B17F12BE56547006D8BEB /* Supabase.swift */; };
 		389B17F42BE565FD006D8BEB /* AuthScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389B17F32BE565FD006D8BEB /* AuthScreen.swift */; };
@@ -87,6 +89,8 @@
 		38201DFF2BF1EAB8003AE77C /* TransferError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferError.swift; sourceTree = "<group>"; };
 		38201E012BF1EAD7003AE77C /* AvatarImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarImageExtension.swift; sourceTree = "<group>"; };
 		38201E032BF1ECDC003AE77C /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		38209EAD2BF203F400A8B4AE /* AutoConfigure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoConfigure.swift; sourceTree = "<group>"; };
+		38209EAF2BF204F200A8B4AE /* Urls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Urls.swift; sourceTree = "<group>"; };
 		389B17F12BE56547006D8BEB /* Supabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Supabase.swift; sourceTree = "<group>"; };
 		389B17F32BE565FD006D8BEB /* AuthScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthScreen.swift; sourceTree = "<group>"; };
 		389B17F52BE5668D006D8BEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -304,6 +308,7 @@
 		3818FC182BE94D0600543D08 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				38209EAF2BF204F200A8B4AE /* Urls.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -328,6 +333,7 @@
 			isa = PBXGroup;
 			children = (
 				3818FC202BE952C500543D08 /* Authentication.swift */,
+				38209EAD2BF203F400A8B4AE /* AutoConfigure.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -580,9 +586,11 @@
 				380710052BEAB9E000352E0D /* SignOutToolbar.swift in Sources */,
 				38201E042BF1ECDC003AE77C /* Color.swift in Sources */,
 				3818FC232BE957A100543D08 /* ExitAppToolBar.swift in Sources */,
+				38209EAE2BF203F400A8B4AE /* AutoConfigure.swift in Sources */,
 				38070FFF2BEAB6AA00352E0D /* PaymentError.swift in Sources */,
 				38DB8AFF2BD77C550091008B /* AutomaApp.swift in Sources */,
 				3818FC1E2BE94F2F00543D08 /* EmailSentSheet.swift in Sources */,
+				38209EB02BF204F200A8B4AE /* Urls.swift in Sources */,
 				38201DFE2BF1EA99003AE77C /* AvatarImage.swift in Sources */,
 				38070FF22BE961B300352E0D /* CloseEmailSentSheetToolBar.swift in Sources */,
 			);
