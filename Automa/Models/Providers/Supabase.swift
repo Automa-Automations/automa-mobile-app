@@ -21,6 +21,3 @@ func supabase_() async -> SupabaseClient {
         return supabase!
     }
 }
-
-
-
