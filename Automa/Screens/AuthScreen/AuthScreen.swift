@@ -1,5 +1,5 @@
 //
-//  AuthView.swift
+//  AuthScreen.swift
 //  Automa
 //
 //  Created by Simon Ferns on 2024/05/03.
@@ -22,7 +22,7 @@ struct AuthScreen: View {
             VStack(spacing: 18) {
                 VStack(spacing: 10) {
                     GenericTitle(title: "Lets sign you in.", description: "Welcome back. \nLets get automating!")
-               }
+                }
 
                 Spacer()
 
@@ -63,7 +63,7 @@ struct AuthScreen: View {
                 .onOpenURL(perform: { url in
                     Task {
                         do {
-                            try await supabase.auth.session(from: url)
+                            try await supabase_().auth.session(from: url)
                         } catch {
                             showAlertDialog(isError: true, inputMessage: error.localizedDescription)
                         }

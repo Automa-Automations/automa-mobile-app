@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+
 struct PaymentButton: View {
     let model: PaymentSheetModel
     let setPaymentBool: (Bool) -> Void
@@ -15,7 +16,7 @@ struct PaymentButton: View {
     let title: String
     let price: String
     let backgroundColor: UInt
-    
+
     var body: some View {
         Button(action: {
             Task.detached {

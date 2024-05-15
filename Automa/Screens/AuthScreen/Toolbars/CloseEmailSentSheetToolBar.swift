@@ -2,7 +2,7 @@ import SwiftUI
 
 struct CloseEmailSentSheetToolBar: ToolbarContent {
     @Binding var showPopover: Bool
-    
+
     var body: some ToolbarContent {
         ToolbarItem(placement: .navigationBarLeading) {
             Button(action: {
@@ -16,4 +16,3 @@ struct CloseEmailSentSheetToolBar: ToolbarContent {
         }
     }
 }
-

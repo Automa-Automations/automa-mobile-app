@@ -1,5 +1,5 @@
 //
-//  CheckoutView.swift
+//  PlanPaymentScreen.swift
 //  Automa
 //
 //  Created by Simon Ferns on 2024/05/03.
@@ -8,7 +8,6 @@
 import Foundation
 import StripePaymentSheet
 import SwiftUI
-
 
 struct PlanPaymentScreen: View {
     @ObservedObject var model = PaymentSheetModel()
@@ -51,7 +50,7 @@ struct PlanPaymentScreen: View {
 
                                 ForEach(plans[1...]) { plan in
                                     PaymentButton(model: model, setPaymentBool: setPaymentBool, showErrorDialog: showErrorDialog, paymentType: plan.id, title: plan.name, price: plan.price_rep, backgroundColor: UInt(plan.hex_color_int))
-                                    }
+                                }
                             }
 
                         }.tint(.white)
@@ -93,7 +92,7 @@ struct PlanPaymentScreen: View {
 
     func fetchAllPlans() async throws -> [PlanItem] {
         do {
-            let items: [PlanItem] = try await supabase.database.from("plans").select().execute().value
+            let items: [PlanItem] = try await supabase_().database.from("plans").select().execute().value
             isPlansLoading = false
             return items.sorted { lhs, rhs -> Bool in
                 lhs.popularity_score > rhs.popularity_score
