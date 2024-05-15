@@ -147,6 +147,7 @@
 		38070FF72BEA52DD00352E0D /* Providers */ = {
 			isa = PBXGroup;
 			children = (
+				389B17F12BE56547006D8BEB /* Supabase.swift */,
 				38070FF92BEA530C00352E0D /* PaymentSheetModel.swift */,
 			);
 			path = Providers;
@@ -363,7 +364,6 @@
 			children = (
 				389B17F52BE5668D006D8BEB /* Info.plist */,
 				38DB8AFE2BD77C550091008B /* AutomaApp.swift */,
-				389B17F12BE56547006D8BEB /* Supabase.swift */,
 				3818FC182BE94D0600543D08 /* Constants */,
 				3818FC172BE94CE900543D08 /* Components */,
 				3818FC082BE94A7700543D08 /* Screens */,
