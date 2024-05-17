@@ -16,4 +16,5 @@ struct PlanItem: Identifiable, Decodable {
     let name: String
     let popularity_score: Int
     let hex_color_int: Int
+    let cta_page: [String]
 }

@@ -23,47 +23,52 @@ struct PlanPaymentScreen: View {
             if isPlansLoading {
                 ProgressView()
             } else {
-                VStack {
-                    VStack(spacing: 10) {
-                        GenericTitle(title: "Choose a plan.", description: "Spend less time.\nExponential results!")
-
-                        Spacer()
-
-                        VStack {
-                            if plans.count > 0 {
-                                ZStack {
-                                    PaymentButton(model: model, setPaymentBool: setPaymentBool, showErrorDialog: showErrorDialog, paymentType: plans[0].id, title: plans[0].name, price: plans[0].price_rep, backgroundColor: 0x5F2E18)
-
-                                    VStack {
+                ZStack {
+                    
+                    VStack {
+                        VStack(spacing: 10) {
+                            GenericTitle(title: "Choose a plan.", description: "Spend less time.\nExponential results!")
+                            
+                            Spacer()
+                            
+                            VStack {
+                                if plans.count > 0 {
+                                    ZStack {
+                                        PaymentButton(model: model, setPaymentBool: setPaymentBool, showErrorDialog: showErrorDialog, paymentType: plans[0].id, title: plans[0].name, price: plans[0].price_rep, cta_page: plans[0].cta_page, backgroundColor: 0x5F2E18, shouldShowCTA: true, preExecution: {
+                                            isPlansLoading.toggle()
+                                        })
+                                        
                                         VStack {
-                                            Text("Most Popular").padding(.all, 7).padding(.horizontal, 10)
+                                            VStack {
+                                                Text("Most Popular").padding(.all, 7).padding(.horizontal, 10)
+                                            }
+                                            .background(Color(hex: 0x404151))
+                                            .cornerRadius(10)
+                                            .overlay(
+                                                RoundedRectangle(cornerRadius: 10)
+                                                    .stroke(.white, lineWidth: 2)
+                                            )
                                         }
-                                        .background(Color(hex: 0x404151))
-                                        .cornerRadius(10)
-                                        .overlay(
-                                            RoundedRectangle(cornerRadius: 10)
-                                                .stroke(.white, lineWidth: 2)
-                                        )
+                                        .offset(y: -40).foregroundColor(.white)
                                     }
-                                    .offset(y: -40).foregroundColor(.white)
+                                    
+                                    ForEach(plans[1...]) { plan in
+                                        PaymentButton(model: model, setPaymentBool: setPaymentBool, showErrorDialog: showErrorDialog, paymentType: plan.id, title: plan.name, price: plan.price_rep, cta_page: plan.cta_page, backgroundColor: UInt(plan.hex_color_int), shouldShowCTA: true, preExecution: {isPlansLoading.toggle()})
+                                    }
                                 }
-
-                                ForEach(plans[1...]) { plan in
-                                    PaymentButton(model: model, setPaymentBool: setPaymentBool, showErrorDialog: showErrorDialog, paymentType: plan.id, title: plan.name, price: plan.price_rep, backgroundColor: UInt(plan.hex_color_int))
-                                }
+                                
+                            }.tint(.white)
+                                .padding()
+                        }
+                        if let result = model.paymentResult {
+                            switch result {
+                            case .completed:
+                                Text("Payment complete")
+                            case let .failed(error):
+                                Text("Payment failed: \(error.localizedDescription)")
+                            case .canceled:
+                                Text("Payment canceled.")
                             }
-
-                        }.tint(.white)
-                            .padding()
-                    }
-                    if let result = model.paymentResult {
-                        switch result {
-                        case .completed:
-                            Text("Payment complete")
-                        case let .failed(error):
-                            Text("Payment failed: \(error.localizedDescription)")
-                        case .canceled:
-                            Text("Payment canceled.")
                         }
                     }
                 }

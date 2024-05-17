@@ -62,23 +62,23 @@ class PaymentSheetModel: ObservableObject {
             DispatchQueue.main.async {
                 let paymentSheet = PaymentSheet(paymentIntentClientSecret: paymentIntentClientSecret, configuration: configuration)
                 self.paymentSheet = paymentSheet
-                paymentSheet.present(from: view) { paymentResult in
-                    // Handle payment result
-                    switch paymentResult {
-                    case .completed:
-                        Task {
-                            await completion("Payment Completed Successfully!", true)
-                        }
-                    case .canceled:
-                        Task {
-                            await completion("You have cancelled the transaction 😔", false)
-                        }
-                    case let .failed(error):
-                        Task {
-                            await completion("Payment failed with error: \(error.localizedDescription)", false)
+                    paymentSheet.present(from: view) { paymentResult in
+                        // Handle payment result
+                        switch paymentResult {
+                        case .completed:
+                            Task {
+                                await completion("Payment Completed Successfully!", true)
+                            }
+                        case .canceled:
+                            Task {
+                                await completion("You have cancelled the transaction 😔", false)
+                            }
+                        case let .failed(error):
+                            Task {
+                                await completion("Payment failed with error: \(error.localizedDescription)", false)
+                            }
                         }
                     }
-                }
             }
         })
         task.resume()
