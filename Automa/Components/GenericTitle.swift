@@ -10,7 +10,7 @@ import SwiftUI
 
 struct GenericTitle: View{
     let title: String
-    let description: String
+    let description: String?
     var body: some View {
         VStack {
             Text(title)
@@ -20,12 +20,14 @@ struct GenericTitle: View{
                 .padding(.leading, 26.0)
                 .foregroundColor(Color("Primary"))
             
-            Text(description)
-                .font(.custom("Inter", size: 32))
-                .fontWeight(.thin)
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(.leading, 25.0)
-                .foregroundColor(Color("TextPrimary"))
+            if description != nil {
+                Text(description!)
+                    .font(.custom("Inter", size: 32))
+                    .fontWeight(.thin)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.leading, 25.0)
+                    .foregroundColor(Color("TextPrimary"))
+            }
         }
     }
 }
