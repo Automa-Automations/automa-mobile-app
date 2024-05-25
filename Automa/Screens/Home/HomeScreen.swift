@@ -16,14 +16,65 @@ struct HomeScreen: View {
                         Form {
                             Section {
                                 HStack {
-                                    
-                                }
+                                    VStack(alignment: .leading) {
+                                        Text("my.account")
+                                            .font(.body)
+                                        HStack {
+                                            Text("+780 Followers")
+                                                .font(.caption)
+                                                .foregroundColor(Color.green)
+                                            Divider()
+                                            Text("+19.5k likes")
+                                                .font(.caption)
+                                                .foregroundColor(Color.green)
+                                            Divider()
+                                            Text("-15 ⌘")
+                                                .font(.caption)
+                                                .foregroundColor(Color.red)
+
+                                        }.padding(.top, -9)
+                                    }
+                                }.padding(.vertical, 6)
                                 HStack {
-                                    
-                                }
+                                    VStack(alignment: .leading) {
+                                        Text("ai_doggos")
+                                            .font(.body)
+                                        HStack {
+                                            Text("+1.78k Followers")
+                                                .font(.caption)
+                                                .foregroundColor(Color.green)
+                                            Divider()
+                                            Text("+5.8k likes")
+                                                .font(.caption)
+                                                .foregroundColor(Color.green)
+                                            Divider()
+                                            Text("-433 ⌘")
+                                                .font(.caption)
+                                                .foregroundColor(Color.red)
+
+                                        }.padding(.top, -9)
+                                    }
+                                }.padding(.vertical, 6)
                                 HStack {
-                                    
-                                }
+                                    VStack(alignment: .leading) {
+                                        Text("elon.musket")
+                                            .font(.body)
+                                        HStack {
+                                            Text("+93 Followers")
+                                                .font(.caption)
+                                                .foregroundColor(Color.green)
+                                            Divider()
+                                            Text("+327 likes")
+                                                .font(.caption)
+                                                .foregroundColor(Color.green)
+                                            Divider()
+                                            Text("-3 ⌘")
+                                                .font(.caption)
+                                                .foregroundColor(Color.red)
+
+                                        }.padding(.top, -9)
+                                    }
+                                }.padding(.vertical, 6)
                             } header: {
                                 VStack {
                                     GenericTitle(title: nil, description: "Top Bots", padding: -20)
