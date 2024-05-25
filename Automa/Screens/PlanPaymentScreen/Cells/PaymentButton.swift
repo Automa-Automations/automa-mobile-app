@@ -70,7 +70,7 @@ struct PaymentButton: View {
                         ForEach(cta_page, id: \.self) { item in
                             if item.hasPrefix("# ") {
                                 let desc = item.replacingOccurrences(of: "# ", with: "")
-                                        GenericTitle(title: "\(title) Plan.", description: desc)
+                                        GenericTitle(title: "\(title) Plan.", description: desc, padding: nil)
                             } else if item.hasPrefix("## ") {
                                 Text(item.replacingOccurrences(of: "## ", with: ""))
                                     .font(.custom("Inter", size: 26))

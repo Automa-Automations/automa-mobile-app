@@ -27,7 +27,7 @@ struct PlanPaymentScreen: View {
                     
                     VStack {
                         VStack(spacing: 10) {
-                            GenericTitle(title: "Choose a plan.", description: "Spend less time.\nExponential results!")
+                            GenericTitle(title: "Choose a plan.", description: "Spend less time.\nExponential results!", padding: nil)
                             
                             Spacer()
                             

@@ -28,6 +28,7 @@
 		38201E042BF1ECDC003AE77C /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38201E032BF1ECDC003AE77C /* Color.swift */; };
 		38209EAE2BF203F400A8B4AE /* AutoConfigure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38209EAD2BF203F400A8B4AE /* AutoConfigure.swift */; };
 		38209EB02BF204F200A8B4AE /* Urls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38209EAF2BF204F200A8B4AE /* Urls.swift */; };
+		38811D912C022C4500A2C500 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38811D902C022C4500A2C500 /* HomeScreen.swift */; };
 		389B17F02BE5652B006D8BEB /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = 389B17EF2BE5652B006D8BEB /* Supabase */; };
 		389B17F22BE56547006D8BEB /* Supabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389B17F12BE56547006D8BEB /* Supabase.swift */; };
 		389B17F42BE565FD006D8BEB /* AuthScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389B17F32BE565FD006D8BEB /* AuthScreen.swift */; };
@@ -92,6 +93,7 @@
 		38201E032BF1ECDC003AE77C /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		38209EAD2BF203F400A8B4AE /* AutoConfigure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoConfigure.swift; sourceTree = "<group>"; };
 		38209EAF2BF204F200A8B4AE /* Urls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Urls.swift; sourceTree = "<group>"; };
+		38811D902C022C4500A2C500 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		389B17F12BE56547006D8BEB /* Supabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Supabase.swift; sourceTree = "<group>"; };
 		389B17F32BE565FD006D8BEB /* AuthScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthScreen.swift; sourceTree = "<group>"; };
 		389B17F52BE5668D006D8BEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 		3818FC082BE94A7700543D08 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				38811D8F2C022C2500A2C500 /* Home */,
 				38070FFC2BEAB35F00352E0D /* PlanPaymentScreen */,
 				3818FC092BE94A8900543D08 /* AuthScreen */,
 			);
@@ -340,6 +343,14 @@
 				38209EAD2BF203F400A8B4AE /* AutoConfigure.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		38811D8F2C022C2500A2C500 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				38811D902C022C4500A2C500 /* HomeScreen.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		38DB8AF22BD77C550091008B = {
@@ -586,6 +597,7 @@
 				389B17FB2BE567AA006D8BEB /* AppView.swift in Sources */,
 				389B17F42BE565FD006D8BEB /* AuthScreen.swift in Sources */,
 				38D230D82BFCB0E90005120A /* PaymentError.swift in Sources */,
+				38811D912C022C4500A2C500 /* HomeScreen.swift in Sources */,
 				38201DFA2BF1E9EB003AE77C /* PlanItem.swift in Sources */,
 				380710052BEAB9E000352E0D /* SignOutToolbar.swift in Sources */,
 				38201E042BF1ECDC003AE77C /* Color.swift in Sources */,
