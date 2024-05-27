@@ -89,8 +89,25 @@ struct HomeScreen: View {
                                         
                                 }
                                 }.textCase(nil)
-                            
+                         
+                            Section {
+                                CostChart()
+                            } header: {
+                                VStack {
+                                    GenericTitle(title: nil, description: "Costs", padding: -20)
+                                    HStack {
+                                        Spacer()
+                                        HStack {
+                                            Text("Full breakdown").foregroundStyle(.brown)
+                                                .textCase(.uppercase)
+                                                .padding(.trailing, -15)
+                                        }
+                                    }
+                                        
+                                }
+                            }.textCase(nil)
                         }
+                        
                     }
                     Spacer()
             }.toolbar {
