@@ -584,7 +584,7 @@ struct HomeScreen: View {
                     Text("Notifications")
                 }
 
-                Text("Settings")
+                Text("Coming Soon")
                     .tabItem {
                         Image(systemName: "gear")
                         Text("Settings")
