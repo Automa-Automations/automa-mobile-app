@@ -21,7 +21,7 @@ struct AppView: View {
                 if isAuthenticated && shouldUserPayBool {
                     PlanPaymentScreen(isAuthenticated: $isAuthenticated, shouldShowPaymentScreen: $shouldUserPayBool)
                 } else if isAuthenticated {
-                    ProfileView()
+                    HomeScreen()
                 } else {
                     AuthScreen()
                 }
