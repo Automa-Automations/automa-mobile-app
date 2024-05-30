@@ -48,10 +48,6 @@ struct HomeScreen: View {
     }
 }
 
-#Preview {
-    HomeScreen()
-}
-
 struct Home: View {
     var body: some View {
         VStack(spacing: 17) {
@@ -171,61 +167,125 @@ struct Home: View {
 
 struct Credits: View {
     let model: PaymentSheetModel = PaymentSheetModel()
+    @State var isBuyCredits: Bool = false
+    
     var body: some View {
-        VStack {
-            GenericTitle(title: "Credits", description: nil, padding: 26)
+         NavigationStack {
+            VStack {
+                GenericTitle(title: "Credits", description: nil, padding: 26)
 
-            VStack(spacing: 35) {
-                GroupBox {
-                    HStack {
-                        VStack(alignment: .leading) {
-                            Text("Credit balance")
-                                .font(.footnote)
-                                .foregroundStyle(Color(hex: 0x8E8E93))
-                            Text("185 775,489 ⌘")
-                                .font(.largeTitle)
-                                .fontWeight(.bold)
-                                
-                            // TODO: Create "Bindable" paymentbutton allowing us to change stats
-                            // TODO: Design sheet that looks pretty good (Will put in figma)
-                            // TODO: Make the credit balance actually update based on the users information (We should keep a global state somewhere
-                            //
+                VStack(spacing: 35) {
+                    GroupBox {
+                        HStack {
+                            VStack(alignment: .leading) {
+                                Text("Credit balance")
+                                    .font(.footnote)
+                                    .foregroundStyle(Color(hex: 0x8E8E93))
+                                Text("185 775,489 ⌘")
+                                    .font(.largeTitle)
+                                    .fontWeight(.bold)
+                                        
+                                Button(action: {isBuyCredits.toggle()}) {
+                                    GroupBox {
+                                        Text("Buy more")
+                                    }.tint(.white)
+                                }.contextMenu(ContextMenu(menuItems: {
+                                    Text("Buy 100 Credits")
+                                    Text("Buy 500 Credits")
+                                    Text("Buy 1000 Credits")
+                                    Text("Earn free credits")
+                                }))
+                            }
+                            Spacer()
                         }
-                        Spacer()
-                    }
-                }.padding(.horizontal, 20)
+                    }.padding(.horizontal, 20)
+                        .contextMenu(menuItems: {
+                            Text("Setup auto-refill")
+                            Text("Buy Previous amount")
+                            Text("Transfer Credits")
+                            Text("Report a problem")
+                        })
 
-                VStack {
-                    GenericTitle(title: nil, description: "Transactions", padding: -1)
-                    ScrollView(showsIndicators: false) {
-                        ForEach(0 ... 10, id: \.self) { _ in
-                            GroupBox {
-                                HStack {
-                                    VStack(alignment: .leading) {
-                                        Text("05/27/2024")
-                                            .font(.callout)
-                                            .foregroundStyle(Color(hex: 0x8E8E93))
-                                        HStack {
-                                            Spacer()
-                                            Text("-100 ⌘")
-                                                .foregroundStyle(.red)
-                                                .fontWeight(.bold)
+                    VStack {
+                        GenericTitle(title: nil, description: "Transactions", padding: -1)
+                        ScrollView(showsIndicators: false) {
+                            ForEach(0 ... 10, id: \.self) { _ in
+                                GroupBox {
+                                    HStack {
+                                        VStack(alignment: .leading) {
+                                            Text("05/27/2024")
+                                                .font(.callout)
+                                                .foregroundStyle(Color(hex: 0x8E8E93))
+                                            HStack {
+                                                Spacer()
+                                                Text("-100 ⌘")
+                                                    .foregroundStyle(.red)
+                                                    .fontWeight(.bold)
+                                            }
+                                            Text("※ Image Generation")
+                                                .font(.callout)
+                                                .foregroundStyle(Color(hex: 0x8E8E93))
                                         }
-                                        Text("※ Image Generation")
-                                            .font(.callout)
-                                            .foregroundStyle(Color(hex: 0x8E8E93))
+                                        Spacer()
                                     }
-                                    Spacer()
                                 }
                             }
                         }
+
+                    }.padding(.horizontal, 20)
+
+                    Spacer()
+                }
+            }.tint(.gray)
+                .sheet(isPresented: $isBuyCredits) {
+                    NavigationStack {
+                        VStack {
+                            HStack {
+                                GroupBox {
+                                    Button(action: {}) {
+                                        Image(systemName: "command.square.fill")
+                                        Text("500 Credits")
+                                        Spacer()
+                                        
+                                    }
+                                }
+                                
+                                GroupBox {
+                                    Button(action: {
+                                        }) {
+                                            Image(systemName: "command.square.fill")
+                                            Text("1000 Credits")
+                                            Spacer()
+                                        }
+                                }
+                            }
+                            
+                            GroupBox {
+                                Button(action: {}) {
+                                    Image(systemName: "plus.square.fill")
+                                    Text("Custom Amount")
+                                    Spacer()
+                                }
+                            }
+                        }.toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button(action: {
+                        isBuyCredits.toggle()
                     }
-
-                }.padding(.horizontal, 20)
-
-                Spacer()
+                    ) {
+                        HStack {
+                            Image(systemName: "chevron.left")
+                            Text("Exit")
+                        }.tint(.brown)
+                    }
+                }
             }
-        }.tint(.gray)
+                        .padding()
+                        Spacer()
+                    }.tint(.cyan)
+                    .presentationDetents([.fraction(0.3)])
+            }
+        }
     }
 }
 
@@ -633,3 +693,8 @@ struct Settings_: View {
         Text("Coming Soon")
     }
 }
+
+#Preview {
+    Credits()
+}
+
