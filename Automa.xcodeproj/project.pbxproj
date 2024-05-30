@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		38035D452C0868CD004EB05A /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38035D442C0868CD004EB05A /* Transaction.swift */; };
 		3803DD242BF5F3D900BAED6E /* CloseSheetToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3803DD232BF5F3D900BAED6E /* CloseSheetToolbar.swift */; };
 		38070FF22BE961B300352E0D /* CloseEmailSentSheetToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38070FF12BE961B300352E0D /* CloseEmailSentSheetToolBar.swift */; };
 		38070FF42BE9631300352E0D /* AuthErrorAlertIOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38070FF32BE9631300352E0D /* AuthErrorAlertIOS.swift */; };
@@ -73,6 +74,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		38035D442C0868CD004EB05A /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		3803DD232BF5F3D900BAED6E /* CloseSheetToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseSheetToolbar.swift; sourceTree = "<group>"; };
 		38070FF12BE961B300352E0D /* CloseEmailSentSheetToolBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseEmailSentSheetToolBar.swift; sourceTree = "<group>"; };
 		38070FF32BE9631300352E0D /* AuthErrorAlertIOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthErrorAlertIOS.swift; sourceTree = "<group>"; };
@@ -272,6 +274,7 @@
 				38201DF92BF1E9EB003AE77C /* PlanItem.swift */,
 				38201DFB2BF1EA14003AE77C /* Profile.swift */,
 				38201DFD2BF1EA99003AE77C /* AvatarImage.swift */,
+				38035D442C0868CD004EB05A /* Transaction.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -617,6 +620,7 @@
 				38209EAE2BF203F400A8B4AE /* AutoConfigure.swift in Sources */,
 				3803DD242BF5F3D900BAED6E /* CloseSheetToolbar.swift in Sources */,
 				38DB8AFF2BD77C550091008B /* AutomaApp.swift in Sources */,
+				38035D452C0868CD004EB05A /* Transaction.swift in Sources */,
 				3818FC1E2BE94F2F00543D08 /* EmailSentSheet.swift in Sources */,
 				38209EB02BF204F200A8B4AE /* Urls.swift in Sources */,
 				38201DFE2BF1EA99003AE77C /* AvatarImage.swift in Sources */,

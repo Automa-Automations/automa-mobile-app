@@ -11,580 +11,34 @@ struct HomeScreen: View {
     var body: some View {
         NavigationStack {
             TabView {
-                VStack(spacing: 17) {
-                    ScrollView(
-                        showsIndicators: false) { VStack {
-                            GenericTitle(title: "Home", description: nil, padding: nil)
-                            Form {
-                                Section {
-                                    HStack {
-                                        VStack(alignment: .leading) {
-                                            Text("my.account")
-                                                .font(.body)
-                                            HStack {
-                                                Text("+780 Followers")
-                                                    .font(.caption)
-                                                    .foregroundColor(Color.green)
-                                                Divider()
-                                                Text("+19.5k likes")
-                                                    .font(.caption)
-                                                    .foregroundColor(Color.green)
-                                                Divider()
-                                                Text("-15 ⌘")
-                                                    .font(.caption)
-                                                    .foregroundColor(Color.red)
-
-                                            }.padding(.top, -9)
-                                        }
-                                    }.padding(.vertical, 6)
-                                    HStack {
-                                        VStack(alignment: .leading) {
-                                            Text("ai_doggos")
-                                                .font(.body)
-                                            HStack {
-                                                Text("+1.78k Followers")
-                                                    .font(.caption)
-                                                    .foregroundColor(Color.green)
-                                                Divider()
-                                                Text("+5.8k likes")
-                                                    .font(.caption)
-                                                    .foregroundColor(Color.green)
-                                                Divider()
-                                                Text("-433 ⌘")
-                                                    .font(.caption)
-                                                    .foregroundColor(Color.red)
-
-                                            }.padding(.top, -9)
-                                        }
-                                    }.padding(.vertical, 6)
-                                    HStack {
-                                        VStack(alignment: .leading) {
-                                            Text("elon.musket")
-                                                .font(.body)
-                                            HStack {
-                                                Text("+93 Followers")
-                                                    .font(.caption)
-                                                    .foregroundColor(Color.green)
-                                                Divider()
-                                                Text("+327 likes")
-                                                    .font(.caption)
-                                                    .foregroundColor(Color.green)
-                                                Divider()
-                                                Text("-3 ⌘")
-                                                    .font(.caption)
-                                                    .foregroundColor(Color.red)
-
-                                            }.padding(.top, -9)
-                                        }
-                                    }.padding(.vertical, 6)
-                                } header: {
-                                    VStack {
-                                        GenericTitle(title: nil, description: "Top Bots", padding: -20)
-                                        HStack {
-                                            Spacer()
-                                            HStack {
-                                                Text("All Bots").foregroundStyle(.brown)
-                                                    .textCase(.uppercase)
-                                                    .padding(.trailing, -15)
-                                            }
-                                        }
-                                    }
-                                }.textCase(nil)
-
-                                Section {
-                                    CostChart()
-                                } header: {
-                                    VStack {
-                                        GenericTitle(title: nil, description: "Costs", padding: -20)
-                                        HStack {
-                                            Spacer()
-                                            HStack {
-                                                Text("Full breakdown").foregroundStyle(.brown).textCase(.uppercase).padding(.trailing, -15)
-                                            }
-                                        }
-                                    }
-                                }.textCase(nil)
-                            }.frame(height: UIScreen.main.bounds.height * 1)
-                        }
-                        }
-
-                    Spacer()
-                }.tabItem {
-                    Image(systemName: "house")
-                    Text("Home")
-                }
-                .toolbar {
-                    ToolbarItem(placement: .navigationBarLeading) {
-                        Button(action: {
-                            print("Action")
-                        }
-                        ) {
-                            HStack {
-                                Image(systemName: "chevron.left")
-                                Text("Exit")
-                            }.tint(.brown)
-                        }
+                // Homescreen
+                Home()
+                    .tabItem {
+                        Image(systemName: "house")
+                        Text("Home")
                     }
-                }
-                VStack {
-                    GenericTitle(title: "Credits", description: nil, padding: 26)
 
-                    VStack(spacing: 35) {
-                        GroupBox {
-                            HStack {
-                                VStack(alignment: .leading) {
-                                    Text("Credit balance")
-                                        .font(.footnote)
-                                        .foregroundStyle(Color(hex: 0x8E8E93))
-                                    Text("185 775,489 ⌘")
-                                        .font(.largeTitle)
-                                        .fontWeight(.bold)
-                                    Button(action: {}, label: {
-                                        GroupBox {
-                                            Text("Buy More")
-                                        }
-                                    })
-                                }
-                                Spacer()
-                            }
-                        }.padding(.horizontal, 20)
-
-                        VStack {
-                            GenericTitle(title: nil, description: "Transactions", padding: -1)
-                            ScrollView(showsIndicators: false) {
-                                ForEach(0 ... 10, id: \.self) { _ in
-                                    GroupBox {
-                                        HStack {
-                                            VStack(alignment: .leading) {
-                                                Text("05/27/2024")
-                                                    .font(.callout)
-                                                    .foregroundStyle(Color(hex: 0x8E8E93))
-                                                HStack {
-                                                    Spacer()
-                                                    Text("-100 ⌘")
-                                                        .foregroundStyle(.red)
-                                                        .fontWeight(.bold)
-                                                }
-                                                Text("※ Image Generation")
-                                                    .font(.callout)
-                                                    .foregroundStyle(Color(hex: 0x8E8E93))
-                                            }
-                                            Spacer()
-                                        }
-                                    }
-                                }
-                            }
-
-                        }.padding(.horizontal, 20)
-
-                        Spacer()
-                    }
-                }.tint(.gray)
+                // Credits
+                Credits()
                     .tabItem {
                         Image(systemName: "command.square.fill")
                         Text("Credits")
                     }
 
-                VStack(alignment: .leading) {
-                    GenericTitle(title: "Create a bot", description: nil, padding: nil)
-                    VStack(alignment: .leading, spacing: 20) {
-                        TabView {
-                            GroupBox {
-                                VStack(spacing: 15) {
-                                    HStack(alignment: .top) {
-                                        Image("cute-animal-generator-temp")
-                                        Spacer()
-                                        Text("Trending Now")
-                                            .font(.footnote)
-                                            .foregroundStyle(Color(hex: 0x8E8E93))
-                                    }
-                                    HStack {
-                                        Text("Podcast Bot")
-                                            .fontWeight(.bold)
-                                            .font(.subheadline)
-                                        Image(systemName: "checkmark.seal.fill")
-                                            .foregroundStyle(.green)
-                                        Spacer()
-                                    }
-                                }
-                                Spacer()
-                                VStack(spacing: 20) {
-                                    HStack {
-                                        Text("An automation workflow that will generate cute animal images, and automatically post them on instagram.")
-                                            .font(.caption)
-                                            .foregroundStyle(Color(hex: 0x8E8E93))
-                                        Spacer()
-                                    }
-                                }
-
-                                HStack {
-                                    Image("logo-temp")
-                                    Text("Automa")
-                                        .font(.caption)
-
-                                    Spacer()
-
-                                    HStack {
-                                        Image(systemName: "heart")
-                                            .font(.caption)
-                                            .padding(.trailing, -3)
-                                            .foregroundStyle(Color(hex: 0x8E8E93))
-                                        Text("4.3k")
-                                            .font(.caption)
-                                            .foregroundStyle(Color(hex: 0x8E8E93))
-                                    }
-                                    HStack {
-                                        Image(systemName: "plus.square.fill")
-                                            .font(.caption)
-                                            .foregroundStyle(Color(hex: 0x8E8E93))
-                                            .padding(.trailing, -3)
-                                        Text("7.5m")
-                                            .font(.caption)
-                                            .foregroundStyle(Color(hex: 0x8E8E93))
-                                    }
-                                }
-                            }.padding(.horizontal, 20)
-
-                            GroupBox {
-                                VStack(spacing: 15) {
-                                    HStack(alignment: .top) {
-                                        Image("cute-animal-generator-temp")
-                                        Spacer()
-                                        Text("Trending Now")
-                                            .font(.footnote)
-                                            .foregroundStyle(Color(hex: 0x8E8E93))
-                                    }
-                                    HStack {
-                                        Text("Bot2")
-                                            .fontWeight(.bold)
-                                            .font(.subheadline)
-                                        Image(systemName: "checkmark.seal.fill")
-                                            .foregroundStyle(.green)
-                                        Spacer()
-                                    }
-                                }
-                                Spacer()
-                                VStack(spacing: 20) {
-                                    HStack {
-                                        Text("An automation workflow that will generate cute animal images, and automatically post them on instagram.")
-                                            .font(.caption)
-                                            .foregroundStyle(Color(hex: 0x8E8E93))
-                                        Spacer()
-                                    }
-                                }
-
-                                HStack {
-                                    Image("logo-temp")
-                                    Text("Automa")
-                                        .font(.caption)
-
-                                    Spacer()
-
-                                    HStack {
-                                        Image(systemName: "heart")
-                                            .font(.caption)
-                                            .padding(.trailing, -3)
-                                            .foregroundStyle(Color(hex: 0x8E8E93))
-                                        Text("4.3k")
-                                            .font(.caption)
-                                            .foregroundStyle(Color(hex: 0x8E8E93))
-                                    }
-                                    HStack {
-                                        Image(systemName: "plus.square.fill")
-                                            .font(.caption)
-                                            .foregroundStyle(Color(hex: 0x8E8E93))
-                                            .padding(.trailing, -3)
-                                        Text("7.5m")
-                                            .font(.caption)
-                                            .foregroundStyle(Color(hex: 0x8E8E93))
-                                    }
-                                }
-                            }.padding(.horizontal, 20)
-                            GroupBox {
-                                VStack(spacing: 15) {
-                                    HStack(alignment: .top) {
-                                        Image("cute-animal-generator-temp")
-                                        Spacer()
-                                        Text("Trending Now")
-                                            .font(.footnote)
-                                            .foregroundStyle(Color(hex: 0x8E8E93))
-                                    }
-                                    HStack {
-                                        Text("Cute Animals Generator")
-                                            .fontWeight(.bold)
-                                            .font(.subheadline)
-                                        Image(systemName: "checkmark.seal.fill")
-                                            .foregroundStyle(.green)
-                                        Spacer()
-                                    }
-                                }
-                                Spacer()
-                                VStack(spacing: 20) {
-                                    HStack {
-                                        Text("An automation workflow that will generate cute animal images, and automatically post them on instagram.")
-                                            .font(.caption)
-                                            .foregroundStyle(Color(hex: 0x8E8E93))
-                                        Spacer()
-                                    }
-                                }
-
-                                HStack {
-                                    Image("logo-temp")
-                                    Text("Automa")
-                                        .font(.caption)
-
-                                    Spacer()
-
-                                    HStack {
-                                        Image(systemName: "heart")
-                                            .font(.caption)
-                                            .padding(.trailing, -3)
-                                            .foregroundStyle(Color(hex: 0x8E8E93))
-                                        Text("4.3k")
-                                            .font(.caption)
-                                            .foregroundStyle(Color(hex: 0x8E8E93))
-                                    }
-                                    HStack {
-                                        Image(systemName: "plus.square.fill")
-                                            .font(.caption)
-                                            .foregroundStyle(Color(hex: 0x8E8E93))
-                                            .padding(.trailing, -3)
-                                        Text("7.5m")
-                                            .font(.caption)
-                                            .foregroundStyle(Color(hex: 0x8E8E93))
-                                    }
-                                }
-                            }.padding(.horizontal, 20)
-                        }.tabViewStyle(.page(indexDisplayMode: .always))
-                            .frame(height: 200)
-
-                        ScrollView(.horizontal, showsIndicators: false) {
-                            HStack(spacing: 10) {
-                                GroupBox {
-                                    VStack(spacing: 15) {
-                                        HStack(alignment: .top) {
-                                            Image("cute-animal-generator-temp")
-                                            Spacer()
-                                        }
-                                        HStack {
-                                            Text("Instagram")
-                                                .fontWeight(.bold)
-                                                .font(.subheadline)
-                                            Image(systemName: "checkmark.seal.fill")
-                                                .foregroundStyle(.green)
-                                            Spacer()
-                                        }
-                                    }
-
-                                    Spacer().frame(height: 30)
-                                    VStack(spacing: 20) {
-                                        HStack {
-                                            Text("A Instagram bot.")
-                                                .font(.caption)
-                                                .foregroundStyle(Color(hex: 0x8E8E93))
-                                            Spacer()
-                                        }
-                                    }
-
-                                    HStack {
-                                        Image("logo-temp")
-                                        Text("Automa")
-                                            .font(.caption)
-
-                                        Spacer()
-
-                                        HStack {
-                                            Image(systemName: "heart")
-                                                .font(.caption)
-                                                .padding(.trailing, -3)
-                                                .foregroundStyle(Color(hex: 0x8E8E93))
-                                            Text("4.3k")
-                                                .font(.caption)
-                                                .foregroundStyle(Color(hex: 0x8E8E93))
-                                        }
-                                    }
-                                }
-                                .frame(width: 170)
-
-                                GroupBox {
-                                    VStack(spacing: 15) {
-                                        HStack(alignment: .top) {
-                                            Image("cute-animal-generator-temp")
-                                            Spacer()
-                                        }
-                                        HStack {
-                                            Text("Instagram")
-                                                .fontWeight(.bold)
-                                                .font(.subheadline)
-                                            Image(systemName: "checkmark.seal.fill")
-                                                .foregroundStyle(.green)
-                                            Spacer()
-                                        }
-                                    }
-
-                                    Spacer().frame(height: 30)
-                                    VStack(spacing: 20) {
-                                        HStack {
-                                            Text("A Instagram bot.")
-                                                .font(.caption)
-                                                .foregroundStyle(Color(hex: 0x8E8E93))
-                                            Spacer()
-                                        }
-                                    }
-
-                                    HStack {
-                                        Image("logo-temp")
-                                        Text("Automa")
-                                            .font(.caption)
-
-                                        Spacer()
-
-                                        HStack {
-                                            Image(systemName: "heart")
-                                                .font(.caption)
-                                                .padding(.trailing, -3)
-                                                .foregroundStyle(Color(hex: 0x8E8E93))
-                                            Text("4.3k")
-                                                .font(.caption)
-                                                .foregroundStyle(Color(hex: 0x8E8E93))
-                                        }
-                                    }
-                                }
-                                .frame(width: 170)
-                                GroupBox {
-                                    VStack(spacing: 15) {
-                                        HStack(alignment: .top) {
-                                            Image("cute-animal-generator-temp")
-                                            Spacer()
-                                        }
-                                        HStack {
-                                            Text("Instagram")
-                                                .fontWeight(.bold)
-                                                .font(.subheadline)
-                                            Image(systemName: "checkmark.seal.fill")
-                                                .foregroundStyle(.green)
-                                            Spacer()
-                                        }
-                                    }
-
-                                    Spacer().frame(height: 30)
-                                    VStack(spacing: 20) {
-                                        HStack {
-                                            Text("Create an instagram bot.")
-                                                .font(.caption)
-                                                .foregroundStyle(Color(hex: 0x8E8E93))
-                                            Spacer()
-                                        }
-                                    }
-
-                                    HStack {
-                                        Image("logo-temp")
-                                        Text("Automa")
-                                            .font(.caption)
-
-                                        Spacer()
-
-                                        HStack {
-                                            Image(systemName: "heart")
-                                                .font(.caption)
-                                                .padding(.trailing, -3)
-                                                .foregroundStyle(Color(hex: 0x8E8E93))
-                                            Text("4.3k")
-                                                .font(.caption)
-                                                .foregroundStyle(Color(hex: 0x8E8E93))
-                                        }
-                                    }
-                                }
-                                .frame(width: 170)
-                            }
-                        }.padding(.leading, 20)
+                // Create Bot View
+                CreateBot()
+                    .tabItem {
+                        Image(systemName: "plus.app")
+                        Text("New Bot")
                     }
-                    HStack {
-                        GroupBox {
-                            HStack(spacing: 15) {
-                                HStack(alignment: .top) {
-                                    Image("podcast-temp")
-                                }
-                                HStack {
-                                    Text("PodClip")
-                                        .fontWeight(.bold)
-                                        .font(.subheadline)
-                                    Image(systemName: "checkmark.seal.fill")
-                                        .foregroundStyle(.green)
-                                    Spacer()
-                                }
-                            }
-                        }
-                        GroupBox {
-                            HStack(spacing: 15) {
-                                HStack(alignment: .top) {
-                                    Image("podcast-temp")
-                                }
-                                HStack {
-                                    Text("PodClip")
-                                        .fontWeight(.bold)
-                                        .font(.subheadline)
-                                    Spacer()
-                                }
-                            }
-                        }
-                    }.padding(.horizontal, 20)
-                    GroupBox {
-                        HStack(spacing: 15) {
-                            HStack(alignment: .top) {
-                                Image(systemName: "plus.square.fill")
-                                    .font(.title)
-                                    .foregroundStyle(Color(hex: 0x8E8E93))
-                            }
-                            HStack {
-                                Text("Create custom bot")
-                                    .fontWeight(.bold)
-                                    .font(.subheadline)
-                                Spacer()
-                            }
-                        }
-
-                    }.padding(.horizontal, 20)
-
-                    Spacer()
-                }
-                .tabItem {
-                    Image(systemName: "plus.app")
-                    Text("New Bot")
-                }
-
-                VStack(spacing: 30) {
-                    GenericTitle(title: "Notifications", description: nil, padding: nil)
-                    GroupBox {
-                        Toggle("Should we send notifications?", isOn: .constant(false))
-                    }.padding(.horizontal, 20)
-
-                    VStack {
-                        GenericTitle(title: nil, description: "Notifications", padding: nil)
-                        ScrollView(showsIndicators: false) {
-                            ForEach(0 ... 10, id: \.self) { _ in
-                                GroupBox {
-                                    HStack {
-                                        VStack(alignment: .leading) {
-                                            Text("※ Image Generation")
-                                                .font(.caption)
-                                                .foregroundStyle(Color(hex: 0x8E8E93))
-                                            Text("😳 Bots are using 70% more credits than usual.").font(.footnote)
-                                                                                    }
-                                        Spacer()
-                                    }
-                                }
-                            }
-                        }.padding(.horizontal, 20)
+                // Notifications
+                Notifications_()
+                    .tabItem {
+                        Image(systemName: "bell")
+                        Text("Notifications")
                     }
-                    Spacer()
-                }
-                .tabItem {
-                    Image(systemName: "bell")
-                    Text("Notifications")
-                }
-
-                Text("Coming Soon")
+                // Settings
+                Settings_()
                     .tabItem {
                         Image(systemName: "gear")
                         Text("Settings")
@@ -596,4 +50,586 @@ struct HomeScreen: View {
 
 #Preview {
     HomeScreen()
+}
+
+struct Home: View {
+    var body: some View {
+        VStack(spacing: 17) {
+            ScrollView(
+                showsIndicators: false) { VStack {
+                    GenericTitle(title: "Home", description: nil, padding: nil)
+                    Form {
+                        Section {
+                            HStack {
+                                VStack(alignment: .leading) {
+                                    Text("my.account")
+                                        .font(.body)
+                                    HStack {
+                                        Text("+780 Followers")
+                                            .font(.caption)
+                                            .foregroundColor(Color.green)
+                                        Divider()
+                                        Text("+19.5k likes")
+                                            .font(.caption)
+                                            .foregroundColor(Color.green)
+                                        Divider()
+                                        Text("-15 ⌘")
+                                            .font(.caption)
+                                            .foregroundColor(Color.red)
+
+                                    }.padding(.top, -9)
+                                }
+                            }.padding(.vertical, 6)
+                            HStack {
+                                VStack(alignment: .leading) {
+                                    Text("ai_doggos")
+                                        .font(.body)
+                                    HStack {
+                                        Text("+1.78k Followers")
+                                            .font(.caption)
+                                            .foregroundColor(Color.green)
+                                        Divider()
+                                        Text("+5.8k likes")
+                                            .font(.caption)
+                                            .foregroundColor(Color.green)
+                                        Divider()
+                                        Text("-433 ⌘")
+                                            .font(.caption)
+                                            .foregroundColor(Color.red)
+
+                                    }.padding(.top, -9)
+                                }
+                            }.padding(.vertical, 6)
+                            HStack {
+                                VStack(alignment: .leading) {
+                                    Text("elon.musket")
+                                        .font(.body)
+                                    HStack {
+                                        Text("+93 Followers")
+                                            .font(.caption)
+                                            .foregroundColor(Color.green)
+                                        Divider()
+                                        Text("+327 likes")
+                                            .font(.caption)
+                                            .foregroundColor(Color.green)
+                                        Divider()
+                                        Text("-3 ⌘")
+                                            .font(.caption)
+                                            .foregroundColor(Color.red)
+
+                                    }.padding(.top, -9)
+                                }
+                            }.padding(.vertical, 6)
+                        } header: {
+                            VStack {
+                                GenericTitle(title: nil, description: "Top Bots", padding: -20)
+                                HStack {
+                                    Spacer()
+                                    HStack {
+                                        Text("All Bots").foregroundStyle(.brown)
+                                            .textCase(.uppercase)
+                                            .padding(.trailing, -15)
+                                    }
+                                }
+                            }
+                        }.textCase(nil)
+
+                        Section {
+                            CostChart()
+                        } header: {
+                            VStack {
+                                GenericTitle(title: nil, description: "Costs", padding: -20)
+                                HStack {
+                                    Spacer()
+                                    HStack {
+                                        Text("Full breakdown").foregroundStyle(.brown).textCase(.uppercase).padding(.trailing, -15)
+                                    }
+                                }
+                            }
+                        }.textCase(nil)
+                    }.frame(height: UIScreen.main.bounds.height * 1)
+                }
+                }
+
+            Spacer()
+        }
+        .toolbar {
+            ToolbarItem(placement: .navigationBarLeading) {
+                Button(action: {
+                    print("Action")
+                }
+                ) {
+                    HStack {
+                        Image(systemName: "chevron.left")
+                        Text("Exit")
+                    }.tint(.brown)
+                }
+            }
+        }
+    }
+}
+
+struct Credits: View {
+    let model: PaymentSheetModel = PaymentSheetModel()
+    var body: some View {
+        VStack {
+            GenericTitle(title: "Credits", description: nil, padding: 26)
+
+            VStack(spacing: 35) {
+                GroupBox {
+                    HStack {
+                        VStack(alignment: .leading) {
+                            Text("Credit balance")
+                                .font(.footnote)
+                                .foregroundStyle(Color(hex: 0x8E8E93))
+                            Text("185 775,489 ⌘")
+                                .font(.largeTitle)
+                                .fontWeight(.bold)
+                                
+                            // TODO: Create "Bindable" paymentbutton allowing us to change stats
+                            // TODO: Design sheet that looks pretty good (Will put in figma)
+                            // TODO: Make the credit balance actually update based on the users information (We should keep a global state somewhere
+                            //
+                        }
+                        Spacer()
+                    }
+                }.padding(.horizontal, 20)
+
+                VStack {
+                    GenericTitle(title: nil, description: "Transactions", padding: -1)
+                    ScrollView(showsIndicators: false) {
+                        ForEach(0 ... 10, id: \.self) { _ in
+                            GroupBox {
+                                HStack {
+                                    VStack(alignment: .leading) {
+                                        Text("05/27/2024")
+                                            .font(.callout)
+                                            .foregroundStyle(Color(hex: 0x8E8E93))
+                                        HStack {
+                                            Spacer()
+                                            Text("-100 ⌘")
+                                                .foregroundStyle(.red)
+                                                .fontWeight(.bold)
+                                        }
+                                        Text("※ Image Generation")
+                                            .font(.callout)
+                                            .foregroundStyle(Color(hex: 0x8E8E93))
+                                    }
+                                    Spacer()
+                                }
+                            }
+                        }
+                    }
+
+                }.padding(.horizontal, 20)
+
+                Spacer()
+            }
+        }.tint(.gray)
+    }
+}
+
+struct CreateBot: View {
+    var body: some View {
+        VStack(alignment: .leading) {
+            GenericTitle(title: "Create a bot", description: nil, padding: nil)
+            VStack(alignment: .leading, spacing: 20) {
+                TabView {
+                    GroupBox {
+                        VStack(spacing: 15) {
+                            HStack(alignment: .top) {
+                                Image("cute-animal-generator-temp")
+                                Spacer()
+                                Text("Trending Now")
+                                    .font(.footnote)
+                                    .foregroundStyle(Color(hex: 0x8E8E93))
+                            }
+                            HStack {
+                                Text("Podcast Bot")
+                                    .fontWeight(.bold)
+                                    .font(.subheadline)
+                                Image(systemName: "checkmark.seal.fill")
+                                    .foregroundStyle(.green)
+                                Spacer()
+                            }
+                        }
+                        Spacer()
+                        VStack(spacing: 20) {
+                            HStack {
+                                Text("An automation workflow that will generate cute animal images, and automatically post them on instagram.")
+                                    .font(.caption)
+                                    .foregroundStyle(Color(hex: 0x8E8E93))
+                                Spacer()
+                            }
+                        }
+
+                        HStack {
+                            Image("logo-temp")
+                            Text("Automa")
+                                .font(.caption)
+
+                            Spacer()
+
+                            HStack {
+                                Image(systemName: "heart")
+                                    .font(.caption)
+                                    .padding(.trailing, -3)
+                                    .foregroundStyle(Color(hex: 0x8E8E93))
+                                Text("4.3k")
+                                    .font(.caption)
+                                    .foregroundStyle(Color(hex: 0x8E8E93))
+                            }
+                            HStack {
+                                Image(systemName: "plus.square.fill")
+                                    .font(.caption)
+                                    .foregroundStyle(Color(hex: 0x8E8E93))
+                                    .padding(.trailing, -3)
+                                Text("7.5m")
+                                    .font(.caption)
+                                    .foregroundStyle(Color(hex: 0x8E8E93))
+                            }
+                        }
+                    }.padding(.horizontal, 20)
+
+                    GroupBox {
+                        VStack(spacing: 15) {
+                            HStack(alignment: .top) {
+                                Image("cute-animal-generator-temp")
+                                Spacer()
+                                Text("Trending Now")
+                                    .font(.footnote)
+                                    .foregroundStyle(Color(hex: 0x8E8E93))
+                            }
+                            HStack {
+                                Text("Bot2")
+                                    .fontWeight(.bold)
+                                    .font(.subheadline)
+                                Image(systemName: "checkmark.seal.fill")
+                                    .foregroundStyle(.green)
+                                Spacer()
+                            }
+                        }
+                        Spacer()
+                        VStack(spacing: 20) {
+                            HStack {
+                                Text("An automation workflow that will generate cute animal images, and automatically post them on instagram.")
+                                    .font(.caption)
+                                    .foregroundStyle(Color(hex: 0x8E8E93))
+                                Spacer()
+                            }
+                        }
+
+                        HStack {
+                            Image("logo-temp")
+                            Text("Automa")
+                                .font(.caption)
+
+                            Spacer()
+
+                            HStack {
+                                Image(systemName: "heart")
+                                    .font(.caption)
+                                    .padding(.trailing, -3)
+                                    .foregroundStyle(Color(hex: 0x8E8E93))
+                                Text("4.3k")
+                                    .font(.caption)
+                                    .foregroundStyle(Color(hex: 0x8E8E93))
+                            }
+                            HStack {
+                                Image(systemName: "plus.square.fill")
+                                    .font(.caption)
+                                    .foregroundStyle(Color(hex: 0x8E8E93))
+                                    .padding(.trailing, -3)
+                                Text("7.5m")
+                                    .font(.caption)
+                                    .foregroundStyle(Color(hex: 0x8E8E93))
+                            }
+                        }
+                    }.padding(.horizontal, 20)
+                    GroupBox {
+                        VStack(spacing: 15) {
+                            HStack(alignment: .top) {
+                                Image("cute-animal-generator-temp")
+                                Spacer()
+                                Text("Trending Now")
+                                    .font(.footnote)
+                                    .foregroundStyle(Color(hex: 0x8E8E93))
+                            }
+                            HStack {
+                                Text("Cute Animals Generator")
+                                    .fontWeight(.bold)
+                                    .font(.subheadline)
+                                Image(systemName: "checkmark.seal.fill")
+                                    .foregroundStyle(.green)
+                                Spacer()
+                            }
+                        }
+                        Spacer()
+                        VStack(spacing: 20) {
+                            HStack {
+                                Text("An automation workflow that will generate cute animal images, and automatically post them on instagram.")
+                                    .font(.caption)
+                                    .foregroundStyle(Color(hex: 0x8E8E93))
+                                Spacer()
+                            }
+                        }
+
+                        HStack {
+                            Image("logo-temp")
+                            Text("Automa")
+                                .font(.caption)
+
+                            Spacer()
+
+                            HStack {
+                                Image(systemName: "heart")
+                                    .font(.caption)
+                                    .padding(.trailing, -3)
+                                    .foregroundStyle(Color(hex: 0x8E8E93))
+                                Text("4.3k")
+                                    .font(.caption)
+                                    .foregroundStyle(Color(hex: 0x8E8E93))
+                            }
+                            HStack {
+                                Image(systemName: "plus.square.fill")
+                                    .font(.caption)
+                                    .foregroundStyle(Color(hex: 0x8E8E93))
+                                    .padding(.trailing, -3)
+                                Text("7.5m")
+                                    .font(.caption)
+                                    .foregroundStyle(Color(hex: 0x8E8E93))
+                            }
+                        }
+                    }.padding(.horizontal, 20)
+                }.tabViewStyle(.page(indexDisplayMode: .always))
+                    .frame(height: 200)
+
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack(spacing: 10) {
+                        GroupBox {
+                            VStack(spacing: 15) {
+                                HStack(alignment: .top) {
+                                    Image("cute-animal-generator-temp")
+                                    Spacer()
+                                }
+                                HStack {
+                                    Text("Instagram")
+                                        .fontWeight(.bold)
+                                        .font(.subheadline)
+                                    Image(systemName: "checkmark.seal.fill")
+                                        .foregroundStyle(.green)
+                                    Spacer()
+                                }
+                            }
+
+                            Spacer().frame(height: 30)
+                            VStack(spacing: 20) {
+                                HStack {
+                                    Text("A Instagram bot.")
+                                        .font(.caption)
+                                        .foregroundStyle(Color(hex: 0x8E8E93))
+                                    Spacer()
+                                }
+                            }
+
+                            HStack {
+                                Image("logo-temp")
+                                Text("Automa")
+                                    .font(.caption)
+
+                                Spacer()
+
+                                HStack {
+                                    Image(systemName: "heart")
+                                        .font(.caption)
+                                        .padding(.trailing, -3)
+                                        .foregroundStyle(Color(hex: 0x8E8E93))
+                                    Text("4.3k")
+                                        .font(.caption)
+                                        .foregroundStyle(Color(hex: 0x8E8E93))
+                                }
+                            }
+                        }
+                        .frame(width: 170)
+
+                        GroupBox {
+                            VStack(spacing: 15) {
+                                HStack(alignment: .top) {
+                                    Image("cute-animal-generator-temp")
+                                    Spacer()
+                                }
+                                HStack {
+                                    Text("Instagram")
+                                        .fontWeight(.bold)
+                                        .font(.subheadline)
+                                    Image(systemName: "checkmark.seal.fill")
+                                        .foregroundStyle(.green)
+                                    Spacer()
+                                }
+                            }
+
+                            Spacer().frame(height: 30)
+                            VStack(spacing: 20) {
+                                HStack {
+                                    Text("A Instagram bot.")
+                                        .font(.caption)
+                                        .foregroundStyle(Color(hex: 0x8E8E93))
+                                    Spacer()
+                                }
+                            }
+
+                            HStack {
+                                Image("logo-temp")
+                                Text("Automa")
+                                    .font(.caption)
+
+                                Spacer()
+
+                                HStack {
+                                    Image(systemName: "heart")
+                                        .font(.caption)
+                                        .padding(.trailing, -3)
+                                        .foregroundStyle(Color(hex: 0x8E8E93))
+                                    Text("4.3k")
+                                        .font(.caption)
+                                        .foregroundStyle(Color(hex: 0x8E8E93))
+                                }
+                            }
+                        }
+                        .frame(width: 170)
+                        GroupBox {
+                            VStack(spacing: 15) {
+                                HStack(alignment: .top) {
+                                    Image("cute-animal-generator-temp")
+                                    Spacer()
+                                }
+                                HStack {
+                                    Text("Instagram")
+                                        .fontWeight(.bold)
+                                        .font(.subheadline)
+                                    Image(systemName: "checkmark.seal.fill")
+                                        .foregroundStyle(.green)
+                                    Spacer()
+                                }
+                            }
+
+                            Spacer().frame(height: 30)
+                            VStack(spacing: 20) {
+                                HStack {
+                                    Text("Create an instagram bot.")
+                                        .font(.caption)
+                                        .foregroundStyle(Color(hex: 0x8E8E93))
+                                    Spacer()
+                                }
+                            }
+
+                            HStack {
+                                Image("logo-temp")
+                                Text("Automa")
+                                    .font(.caption)
+
+                                Spacer()
+
+                                HStack {
+                                    Image(systemName: "heart")
+                                        .font(.caption)
+                                        .padding(.trailing, -3)
+                                        .foregroundStyle(Color(hex: 0x8E8E93))
+                                    Text("4.3k")
+                                        .font(.caption)
+                                        .foregroundStyle(Color(hex: 0x8E8E93))
+                                }
+                            }
+                        }
+                        .frame(width: 170)
+                    }
+                }.padding(.leading, 20)
+            }
+            HStack {
+                GroupBox {
+                    HStack(spacing: 15) {
+                        HStack(alignment: .top) {
+                            Image("podcast-temp")
+                        }
+                        HStack {
+                            Text("PodClip")
+                                .fontWeight(.bold)
+                                .font(.subheadline)
+                            Image(systemName: "checkmark.seal.fill")
+                                .foregroundStyle(.green)
+                            Spacer()
+                        }
+                    }
+                }
+                GroupBox {
+                    HStack(spacing: 15) {
+                        HStack(alignment: .top) {
+                            Image("podcast-temp")
+                        }
+                        HStack {
+                            Text("PodClip")
+                                .fontWeight(.bold)
+                                .font(.subheadline)
+                            Spacer()
+                        }
+                    }
+                }
+            }.padding(.horizontal, 20)
+            GroupBox {
+                HStack(spacing: 15) {
+                    HStack(alignment: .top) {
+                        Image(systemName: "plus.square.fill")
+                            .font(.title)
+                            .foregroundStyle(Color(hex: 0x8E8E93))
+                    }
+                    HStack {
+                        Text("Create custom bot")
+                            .fontWeight(.bold)
+                            .font(.subheadline)
+                        Spacer()
+                    }
+                }
+
+            }.padding(.horizontal, 20)
+
+            Spacer()
+        }
+    }
+}
+
+struct Notifications_: View {
+    var body: some View {
+        VStack(spacing: 30) {
+            GenericTitle(title: "Notifications", description: nil, padding: nil)
+            GroupBox {
+                Toggle("Should we send notifications?", isOn: .constant(false))
+            }.padding(.horizontal, 20)
+
+            VStack {
+                GenericTitle(title: nil, description: "Notifications", padding: nil)
+                ScrollView(showsIndicators: false) {
+                    ForEach(0 ... 10, id: \.self) { _ in
+                        GroupBox {
+                            HStack {
+                                VStack(alignment: .leading) {
+                                    Text("※ Image Generation")
+                                        .font(.caption)
+                                        .foregroundStyle(Color(hex: 0x8E8E93))
+                                    Text("😳 Bots are using 70% more credits than usual.").font(.footnote)
+                                }
+                                Spacer()
+                            }
+                        }
+                    }
+                }.padding(.horizontal, 20)
+            }
+            Spacer()
+        }
+    }
+}
+
+struct Settings_: View {
+    var body: some View {
+        Text("Coming Soon")
+    }
 }
