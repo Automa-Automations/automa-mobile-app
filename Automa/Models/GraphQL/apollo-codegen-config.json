@@ -1,0 +1,29 @@
+{
+  "schemaNamespace" : "AutomaGraphQLCodegen",
+  "input" : {
+    "operationSearchPaths" : [
+      "./**/*.graphql"
+    ],
+    "schemaSearchPaths" : [
+      "./schema.json"
+    ]
+  },
+  "output" : {
+    "testMocks" : {
+      "none" : {
+      }
+    },
+    "schemaTypes" : {
+      "path" : "./AutomaGraphQLCodegen",
+      "moduleType" : {
+        "embeddedInTarget" : {
+          "name" : "AutomaGraphQLCodegen"
+        }
+      }
+    },
+    "operations" : {
+      "inSchemaModule" : {
+      }
+    }
+  }
+}

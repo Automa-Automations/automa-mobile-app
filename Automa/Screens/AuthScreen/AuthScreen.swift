@@ -21,7 +21,7 @@ struct AuthScreen: View {
         NavigationStack {
             VStack(spacing: 18) {
                 VStack(spacing: 10) {
-                    GenericTitle(title: "Lets sign you in.", description: "Welcome back. \nLets get automating!")
+                    GenericTitle(title: "Lets sign you in.", description: "Welcome back. \nLets get automating!", padding: nil)
                 }
 
                 Spacer()
