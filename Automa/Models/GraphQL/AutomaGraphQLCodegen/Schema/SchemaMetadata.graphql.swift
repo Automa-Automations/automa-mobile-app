@@ -30,20 +30,15 @@ extension AutomaGraphQLCodegen {
     static func objectType(forTypename typename: String) -> ApolloAPI.Object? {
       switch typename {
       case "Query": return AutomaGraphQLCodegen.Objects.Query
-      case "plansConnection": return AutomaGraphQLCodegen.Objects.PlansConnection
-      case "plansEdge": return AutomaGraphQLCodegen.Objects.PlansEdge
-      case "plans": return AutomaGraphQLCodegen.Objects.Plans
-      case "bot_sessions": return AutomaGraphQLCodegen.Objects.Bot_sessions
-      case "bots": return AutomaGraphQLCodegen.Objects.Bots
-      case "profiles": return AutomaGraphQLCodegen.Objects.Profiles
-      case "proxies": return AutomaGraphQLCodegen.Objects.Proxies
-      case "transactions": return AutomaGraphQLCodegen.Objects.Transactions
       case "transactionsConnection": return AutomaGraphQLCodegen.Objects.TransactionsConnection
       case "transactionsEdge": return AutomaGraphQLCodegen.Objects.TransactionsEdge
-      case "profilesConnection": return AutomaGraphQLCodegen.Objects.ProfilesConnection
-      case "profilesEdge": return AutomaGraphQLCodegen.Objects.ProfilesEdge
-      case "botsConnection": return AutomaGraphQLCodegen.Objects.BotsConnection
-      case "botsEdge": return AutomaGraphQLCodegen.Objects.BotsEdge
+      case "transactions": return AutomaGraphQLCodegen.Objects.Transactions
+      case "bot_sessions": return AutomaGraphQLCodegen.Objects.Bot_sessions
+      case "bots": return AutomaGraphQLCodegen.Objects.Bots
+      case "plans": return AutomaGraphQLCodegen.Objects.Plans
+      case "profiles": return AutomaGraphQLCodegen.Objects.Profiles
+      case "proxies": return AutomaGraphQLCodegen.Objects.Proxies
+      case "PageInfo": return AutomaGraphQLCodegen.Objects.PageInfo
       default: return nil
       }
     }

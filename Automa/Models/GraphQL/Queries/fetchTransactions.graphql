@@ -1,0 +1,14 @@
+query fetchTransactions {
+  transactionsCollection {
+    edges {
+      node {
+        id
+        created_at
+        credits
+        head
+        metadata
+        user_id
+      }
+    }
+  }
+}

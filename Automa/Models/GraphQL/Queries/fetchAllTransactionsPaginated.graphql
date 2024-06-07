@@ -1,0 +1,19 @@
+query fetchAllTransactionsPaginated($userId: UUID!, $first: Int, $after: Cursor) {
+  transactionsCollection(filter: { user_id: { eq: $userId } }, first: $first, after: $after) {
+    edges {
+      cursor
+      node {
+        id
+        created_at
+        credits
+        head
+        metadata
+        user_id
+      }
+    }
+    pageInfo {
+      endCursor
+      hasNextPage
+    }
+  }
+}

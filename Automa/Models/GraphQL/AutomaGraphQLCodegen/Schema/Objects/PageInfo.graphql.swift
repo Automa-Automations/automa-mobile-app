@@ -4,8 +4,8 @@
 import ApolloAPI
 
 extension AutomaGraphQLCodegen.Objects {
-  static let BotsEdge = ApolloAPI.Object(
-    typename: "botsEdge",
+  static let PageInfo = ApolloAPI.Object(
+    typename: "PageInfo",
     implementedInterfaces: []
   )
 }

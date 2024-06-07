@@ -168,131 +168,118 @@ struct Home: View {
 struct Credits: View {
     @State var isBuyCredits: Bool = false
     @ObservedObject var model = PaymentSheetModel()
+    @State var isLoading: Bool = true
+    @State var transactions: [Transaction] = []
 
     var body: some View {
         NavigationStack {
-            VStack {
-                ScrollView {
-                GenericTitle(title: "Credits", description: nil, padding: 26)
-                
-                    VStack(spacing: 35) {
-                        GroupBox {
-                            HStack {
-                                VStack(alignment: .leading) {
-                                    Text("Credit balance")
-                                        .font(.footnote)
-                                        .foregroundStyle(Color(hex: 0x8E8E93))
-                                    Text("185 775,489 ⌘")
-                                        .font(.largeTitle)
-                                        .fontWeight(.bold)
-                                    
-                                    Button(action: { isBuyCredits.toggle() }) {
-                                        GroupBox {
-                                            Text("Buy more")
-                                        }.tint(.white)
-                                    }.contextMenu(ContextMenu(menuItems: {
-                                        Text("Buy 100 Credits")
-                                        Text("Buy 500 Credits")
-                                        Text("Buy 1000 Credits")
-                                        Text("Earn free credits")
-                                    }))
-                                }
-                                Spacer()
-                            }
-                        }.padding(.horizontal, 20)
-                            .contextMenu(menuItems: {
-                                Text("Setup auto-refill")
-                                Text("Buy Previous amount")
-                                Text("Transfer Credits")
-                                Text("Report a problem")
-                            })
+            if isLoading {
+                ProgressView()
+            } else {
+                VStack {
+                    ScrollView {
+                        GenericTitle(title: "Credits", description: nil, padding: 26)
                         
-                        VStack {
-                            GenericTitle(title: nil, description: "Transactions", padding: -1)
-                            ForEach(0 ... 10, id: \.self) { _ in
-                                GroupBox {
-                                    HStack {
-                                        VStack(alignment: .leading) {
-                                            Text("05/27/2024")
-                                                .font(.callout)
-                                                .foregroundStyle(Color(hex: 0x8E8E93))
-                                            HStack {
-                                                Spacer()
-                                                Text("-100 ⌘")
-                                                    .foregroundStyle(.red)
-                                                    .fontWeight(.bold)
-                                            }
-                                            Text("※ Image Generation")
-                                                .font(.callout)
-                                                .foregroundStyle(Color(hex: 0x8E8E93))
-                                        }
-                                        Spacer()
-                                    }
-                                }
-                            }
-                            
-                        }.padding(.horizontal, 20)
-                        
-                        Spacer()
-                    }
-                }
-            }.tint(.gray)
-                .sheet(isPresented: $isBuyCredits) {
-                    NavigationStack {
-                        VStack {
-                            HStack {
-                                GroupBox {
-                                    Button(action: {
-                                        isBuyCredits.toggle()
-                                        Task.detached {
-                                            if let viewController = await UIApplication.shared.windows.first?.rootViewController {
-                                                do {
-                                                    await model.preparePaymentSheet(view: viewController, payment: "credits_500", completion: { _, success in
-                                                        if success {
-                                                            print("TRUE")
-                                                        } else {
-                                                            print("FALSE")
-                                                        }
-                                                    })
-                                                } catch {
-                                                    print("DO SOMETHING HERE!")
-                                                }
-                                            }
-                                        }
-                                    }) {
-                                        Image(systemName: "command.square.fill")
-                                        Text("1000 Credits")
-                                        Spacer()
-                                    }
-                                }
-
-                                GroupBox {
-                                    Button(action: {
-                                        isBuyCredits.toggle()
-                                        Task.detached {
-                                            if let viewController = await UIApplication.shared.windows.first?.rootViewController {
-                                                do {
-                                                    await model.preparePaymentSheet(view: viewController, payment: "credits_1000", completion: { _, success in
-                                                        if success {
-                                                            print("TRUE")
-                                                        } else {
-                                                            print("FALSE")
-                                                        }
-                                                    })
-                                                } catch {
-                                                    print("DO SOMETHING HERE!")
-                                                }
-                                            }
-                                        }
-                                    }) {
-                                        Image(systemName: "command.square.fill")
-                                        Text("500 Credits")
-                                        Spacer()
-                                    }
-                                }
-                            }
-
+                        VStack(spacing: 35) {
                             GroupBox {
+                                HStack {
+                                    VStack(alignment: .leading) {
+                                        Text("Credit balance")
+                                            .font(.footnote)
+                                            .foregroundStyle(Color(hex: 0x8E8E93))
+                                        Text("185 775,489 ⌘")
+                                            .font(.largeTitle)
+                                            .fontWeight(.bold)
+                                        
+                                        Button(action: { isBuyCredits.toggle() }) {
+                                            GroupBox {
+                                                Text("Buy more")
+                                            }.tint(.white)
+                                        }.contextMenu(ContextMenu(menuItems: {
+                                            Text("Buy 100 Credits")
+                                            Text("Buy 500 Credits")
+                                            Text("Buy 1000 Credits")
+                                            Text("Earn free credits")
+                                        }))
+                                    }
+                                    Spacer()
+                                }
+                            }.padding(.horizontal, 20)
+                                .contextMenu(menuItems: {
+                                    Text("Setup auto-refill")
+                                    Text("Buy Previous amount")
+                                    Text("Transfer Credits")
+                                    Text("Report a problem")
+                                })
+                            
+                            VStack {
+                                GenericTitle(title: nil, description: "Transactions", padding: -1)
+                                ForEach(self.transactions, id: \.id) { transaction in
+                                    TransactionCell(transaction: transaction)
+                                }
+                                
+                            }.padding(.horizontal, 20)
+                            
+                            Spacer()
+                        }
+                    }
+                }.tint(.gray)
+                    .sheet(isPresented: $isBuyCredits) {
+                        NavigationStack {
+                            VStack {
+                                HStack {
+                                    GroupBox {
+                                        Button(action: {
+                                            isBuyCredits.toggle()
+                                            Task.detached {
+                                                if let viewController = await UIApplication.shared.windows.first?.rootViewController {
+                                                    do {
+                                                        await model.preparePaymentSheet(view: viewController, payment: "credits_500", completion: { _, success in
+                                                            if success {
+                                                                print("TRUE")
+                                                            } else {
+                                                                print("FALSE")
+                                                            }
+                                                        })
+                                                    } catch {
+                                                        print("DO SOMETHING HERE!")
+                                                    }
+                                                }
+                                            }
+                                        }) {
+                                            Image(systemName: "command.square.fill")
+                                            Text("1000 Credits")
+                                            Spacer()
+                                        }
+                                    }
+                                    
+                                    GroupBox {
+                                        Button(action: {
+                                            isBuyCredits.toggle()
+                                            Task.detached {
+                                                if let viewController = await UIApplication.shared.windows.first?.rootViewController {
+                                                    do {
+                                                        await model.preparePaymentSheet(view: viewController, payment: "credits_1000", completion: { _, success in
+                                                            if success {
+                                                                print("TRUE")
+                                                            } else {
+                                                                print("FALSE")
+                                                            }
+                                                        })
+                                                    } catch {
+                                                        print("DO SOMETHING HERE!")
+                                                    }
+                                                }
+                                            }
+                                        }) {
+                                            Image(systemName: "command.square.fill")
+                                            Text("500 Credits")
+                                            Spacer()
+                                        }
+                                    }
+                                }
+                                
+                                GroupBox {
                                     Button(action: {
                                         isBuyCredits.toggle()
                                         Task.detached {
@@ -316,25 +303,36 @@ struct Credits: View {
                                         Spacer()
                                     }
                                 }
-                        }.toolbar {
-                            ToolbarItem(placement: .navigationBarLeading) {
-                                Button(action: {
-                                    isBuyCredits.toggle()
-                                }
-                                ) {
-                                    HStack {
-                                        Image(systemName: "chevron.left")
-                                        Text("Exit")
-                                    }.tint(.brown)
+                            }.toolbar {
+                                ToolbarItem(placement: .navigationBarLeading) {
+                                    Button(action: {
+                                        isBuyCredits.toggle()
+                                    }
+                                    ) {
+                                        HStack {
+                                            Image(systemName: "chevron.left")
+                                            Text("Exit")
+                                        }.tint(.brown)
+                                    }
                                 }
                             }
-                        }
-                        .padding()
-                        Spacer()
-                    }.tint(.cyan)
-                        .presentationDetents([.fraction(0.3)])
-                }
+                            .padding()
+                            Spacer()
+                        }.tint(.cyan)
+                            .presentationDetents([.fraction(0.3)])
+                    }
+            }
+        }.onAppear {
+            getUserTransactions(completion: self.saveTransactions)
         }
+    }
+    
+    func saveTransactions(transactions_: [Transaction]?, error: Error?) {
+        guard let transactions_ else { self.isLoading = false; return Void() }
+            self.transactions = transactions_
+        
+        guard let error else { self.isLoading = false; return Void() }
+            print("TODO: We need to figure this out")
     }
 }
 
@@ -743,6 +741,40 @@ struct Settings_: View {
     }
 }
 
+struct TransactionCell: View {
+    let transaction: Transaction
+    var body: some View {
+        GroupBox {
+            HStack {
+                VStack(alignment: .leading) {
+                    Text(transaction.created_at.formatted().split(separator: ",")[0])
+                        .font(.callout)
+                        .foregroundStyle(Color(hex: 0x8E8E93))
+                    HStack {
+                        Spacer()
+                        if transaction.credits > 0 {
+                            Text("+\(transaction.credits) ⌘")
+                                .foregroundStyle(.green)
+                                .fontWeight(.bold)
+                        } else {
+                            Text("\(transaction.credits) ⌘")
+                                .foregroundStyle(.red)
+                                .fontWeight(.bold)
+
+                        }
+                    }
+                    Text("※ \(transaction.head)")
+                        .font(.callout)
+                        .foregroundStyle(Color(hex: 0x8E8E93))
+                }
+                Spacer()
+            }
+        }
+    }
+}
+
+
 #Preview {
     Credits()
 }
+

@@ -1,0 +1,19 @@
+query fetchAllTransactions($userId: UUID!, $first: Int) {
+  transactionsCollection(filter: { user_id: { eq: $userId } }, first: $first) {
+    edges {
+      cursor
+      node {
+        id
+        created_at
+        credits
+        head
+        metadata
+        user_id
+      }
+    }
+    pageInfo {
+      endCursor
+      hasNextPage
+    }
+  }
+}
