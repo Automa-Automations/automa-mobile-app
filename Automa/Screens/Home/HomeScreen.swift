@@ -215,10 +215,15 @@ struct Credits: View {
                             VStack {
                                 GenericTitle(title: nil, description: "Transactions", padding: -1)
                                 ForEach(self.transactions, id: \.id) { transaction in
-                                    TransactionCell(transaction: transaction)
+                                    NavigationLink(value: transaction) {
+                                        TransactionCell(transaction: transaction)
+                                    }
                                 }
                                 
                             }.padding(.horizontal, 20)
+                                .navigationDestination(for: Transaction.self) { transaction in
+                                    Text("\(transaction.metadata)")
+                                }
                             
                             Spacer()
                         }
