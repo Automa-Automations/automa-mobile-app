@@ -227,7 +227,11 @@ struct Credits: View {
 
                             }.padding(.horizontal, 20)
                                 .navigationDestination(for: Transaction.self) { transaction in
-                                    Text("\(transaction.metadata)")
+                                    TransactionCell(transaction: transaction).padding(.horizontal, 20)
+                                    GenericTitle(title: nil, description: "Metadata", padding: nil)
+                                    // TODO: Map over all of the .metadata values
+                                    Text("Coming Soon")
+                                    Spacer()
                                 }
 
                             Spacer()
