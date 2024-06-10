@@ -171,6 +171,7 @@ struct Credits: View {
     @State var isLoading: Bool = true
     @State var transactions: [Transaction] = []
     @State var transactionPurchase: Date = Date()
+    @State var credits: Int = 0
 
     var body: some View {
         NavigationStack {
@@ -178,7 +179,7 @@ struct Credits: View {
                 ProgressView()
             } else {
                 VStack {
-                    ScrollView {
+                    ScrollView(showsIndicators: false) {
                         GenericTitle(title: "Credits", description: nil, padding: 26)
 
                         VStack(spacing: 35) {
@@ -188,7 +189,7 @@ struct Credits: View {
                                         Text("Credit balance")
                                             .font(.footnote)
                                             .foregroundStyle(Color(hex: 0x8E8E93))
-                                        Text("185 775,489 ⌘")
+                                        Text("\(credits) ⌘")
                                             .font(.largeTitle)
                                             .fontWeight(.bold)
 
@@ -199,9 +200,9 @@ struct Credits: View {
                                         }.contextMenu(ContextMenu(menuItems: {
                                             BuyCreditsButton(credits: 100, isBuyCredits: $isBuyCredits, model: model, mod: $transactionPurchase)
 
-                                            BuyCreditsButton(credits: 500, isBuyCredits: $isBuyCredits, model: model,  mod: $transactionPurchase)
+                                            BuyCreditsButton(credits: 500, isBuyCredits: $isBuyCredits, model: model, mod: $transactionPurchase)
 
-                                            BuyCreditsButton(credits: 1000, isBuyCredits: $isBuyCredits, model: model,  mod: $transactionPurchase)
+                                            BuyCreditsButton(credits: 1000, isBuyCredits: $isBuyCredits, model: model, mod: $transactionPurchase)
 
                                             Text("Earn free credits")
                                         }))
@@ -232,35 +233,36 @@ struct Credits: View {
                             Spacer()
                         }
                     }
-                }.tint(.gray)
-                    .sheet(isPresented: $isBuyCredits) {
-                        NavigationStack {
-                            VStack {
-                                HStack {
-                                    BuyCreditsButton(credits: 500, isBuyCredits: $isBuyCredits, model: model, mod: $transactionPurchase)
+                }
+                .tint(.gray)
+                .sheet(isPresented: $isBuyCredits) {
+                    NavigationStack {
+                        VStack {
+                            HStack {
+                                BuyCreditsButton(credits: 500, isBuyCredits: $isBuyCredits, model: model, mod: $transactionPurchase)
 
-                                    BuyCreditsButton(credits: 1000, isBuyCredits: $isBuyCredits, model: model, mod: $transactionPurchase)
+                                BuyCreditsButton(credits: 1000, isBuyCredits: $isBuyCredits, model: model, mod: $transactionPurchase)
+                            }
+
+                            BuyCreditsButton(credits: 2000, isBuyCredits: $isBuyCredits, model: model, mod: $transactionPurchase)
+                        }.toolbar {
+                            ToolbarItem(placement: .navigationBarLeading) {
+                                Button(action: {
+                                    isBuyCredits.toggle()
                                 }
-
-                                BuyCreditsButton(credits: 2000, isBuyCredits: $isBuyCredits, model: model, mod: $transactionPurchase)
-                            }.toolbar {
-                                ToolbarItem(placement: .navigationBarLeading) {
-                                    Button(action: {
-                                        isBuyCredits.toggle()
-                                    }
-                                    ) {
-                                        HStack {
-                                            Image(systemName: "chevron.left")
-                                            Text("Exit")
-                                        }.tint(.brown)
-                                    }
+                                ) {
+                                    HStack {
+                                        Image(systemName: "chevron.left")
+                                        Text("Exit")
+                                    }.tint(.brown)
                                 }
                             }
-                            .padding()
-                            Spacer()
-                        }.tint(.cyan)
-                            .presentationDetents([.fraction(0.3)])
-                    }
+                        }
+                        .padding()
+                        Spacer()
+                    }.tint(.cyan)
+                        .presentationDetents([.fraction(0.3)])
+                }
             }
         }.onAppear {
             Task.detached {
@@ -269,16 +271,17 @@ struct Credits: View {
         }
         .onChange(of: transactionPurchase) {
             Task.detached {
-                print("STARTED")
                 await getUserTransactions(completion: self.saveTransactions)
-                print("ENDED")
             }
         }
     }
 
-    func saveTransactions(transactions_: [Transaction]?, error: Error?) {
+    func saveTransactions(transactions_: [Transaction]?, credits_: Int?, error: Error?) {
         guard let transactions_ else { isLoading = false; return () }
         transactions = transactions_
+
+        guard let credits_ else { isLoading = false; return () }
+        credits = credits_
 
         guard let error else { isLoading = false; return () }
         print("TODO: We need to figure this out")
@@ -744,12 +747,14 @@ struct BuyCreditsButton: View {
                                     mod = Date()
                                 } else {
                                     print("FALSE")
+                                    mod = Date()
                                 }
                             })
                         } catch {
                             print("DO SOMETHING HERE!")
                         }
                     }
+                    mod = Date()
                 }
             }) {
                 Image(systemName: "command.square.fill")

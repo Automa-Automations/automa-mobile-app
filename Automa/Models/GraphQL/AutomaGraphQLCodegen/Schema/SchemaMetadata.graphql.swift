@@ -39,6 +39,8 @@ extension AutomaGraphQLCodegen {
       case "profiles": return AutomaGraphQLCodegen.Objects.Profiles
       case "proxies": return AutomaGraphQLCodegen.Objects.Proxies
       case "PageInfo": return AutomaGraphQLCodegen.Objects.PageInfo
+      case "profilesConnection": return AutomaGraphQLCodegen.Objects.ProfilesConnection
+      case "profilesEdge": return AutomaGraphQLCodegen.Objects.ProfilesEdge
       default: return nil
       }
     }
