@@ -7,9 +7,9 @@
 
 import Foundation
 
-func getUserTransactions(completion: @escaping ([Transaction]?, Error?) -> Void) {
+func getUserTransactions(completion: @escaping ([Transaction]?, Error?) -> Void) async {
     let client = DataCoordinator().apolloClient
-    client.fetch(query: AutomaGraphQLCodegen.FetchAllTransactionsQuery(userId: "f5558465-b474-4cbf-85ff-075e402764e2", first: 1000), cachePolicy: .fetchIgnoringCacheCompletely) { result in
+    client.fetch(query: AutomaGraphQLCodegen.FetchAllTransactionsQuery(userId: await userId_(), first: 1000), cachePolicy: .fetchIgnoringCacheCompletely) { result in
         switch result {
         case .success(let graphQLResult):
             if let transactionsData = graphQLResult.data?.transactionsCollection?.edges {
@@ -21,7 +21,7 @@ func getUserTransactions(completion: @escaping ([Transaction]?, Error?) -> Void)
                                 
                                 return Transaction(
                                     id: node.id,
-                                    created_at: ISO8601DateFormatter().date(from: node.created_at) ?? Date(),
+                                    created_at: Date.fromTimestampz(node.created_at) ?? Date(),
                                     credits: Int(node.credits ?? "0")!,
                                     head: node.head ?? "",
                                     metadata: metadata,

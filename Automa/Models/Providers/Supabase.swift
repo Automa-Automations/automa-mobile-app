@@ -10,6 +10,7 @@ import Supabase
 
 var supabase: Optional<SupabaseClient> = nil
 
+var userId: Optional<String> = nil
 
 func supabase_() async -> SupabaseClient {
     switch supabase {
@@ -17,7 +18,18 @@ func supabase_() async -> SupabaseClient {
         let (newSupabaseURL, newSupabaseKey) = try! await API.configureSupabase()
         supabase = SupabaseClient(supabaseURL: newSupabaseURL, supabaseKey: newSupabaseKey)
         return supabase!
-    case .some(_):
+    case .some:
         return supabase!
     }
+}
+
+func userId_() async -> String {
+    switch userId {
+    case .none:
+        let client = await supabase_()
+        userId = try! await client.auth.user().id.uuidString
+    case .some:
+        return userId!
+    }
+    return userId!
 }

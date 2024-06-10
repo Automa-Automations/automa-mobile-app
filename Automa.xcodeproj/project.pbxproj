@@ -85,6 +85,7 @@
 		38E2F89C2BE8E95700D4EE51 /* SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 38E2F8932BE8E95700D4EE51 /* SemiBold.ttf */; };
 		38E2F89D2BE8E95700D4EE51 /* Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 38E2F8942BE8E95700D4EE51 /* Thin.ttf */; };
 		38E2F8A02BE9064100D4EE51 /* AlertToast in Frameworks */ = {isa = PBXBuildFile; productRef = 38E2F89F2BE9064100D4EE51 /* AlertToast */; };
+		38F76D062C16E222001E7140 /* DateFromPostgresTimestamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F76D052C16E222001E7140 /* DateFromPostgresTimestamp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -183,6 +184,7 @@
 		38E2F8922BE8E95700D4EE51 /* Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Regular.ttf; sourceTree = "<group>"; };
 		38E2F8932BE8E95700D4EE51 /* SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SemiBold.ttf; sourceTree = "<group>"; };
 		38E2F8942BE8E95700D4EE51 /* Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Thin.ttf; sourceTree = "<group>"; };
+		38F76D052C16E222001E7140 /* DateFromPostgresTimestamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFromPostgresTimestamp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -312,6 +314,7 @@
 			isa = PBXGroup;
 			children = (
 				38201E032BF1ECDC003AE77C /* Color.swift */,
+				38F76D052C16E222001E7140 /* DateFromPostgresTimestamp.swift */,
 				38201E012BF1EAD7003AE77C /* AvatarImageExtension.swift */,
 			);
 			path = Extensions;
@@ -781,6 +784,7 @@
 				381DC3582C02577B0092A951 /* CostChart.swift in Sources */,
 				38E2488B2C1305FF00B20C54 /* Bot_sessions.graphql.swift in Sources */,
 				3818FC212BE952C500543D08 /* Authentication.swift in Sources */,
+				38F76D062C16E222001E7140 /* DateFromPostgresTimestamp.swift in Sources */,
 				38201E022BF1EAD7003AE77C /* AvatarImageExtension.swift in Sources */,
 				38E248872C1305FF00B20C54 /* Datetime.swift in Sources */,
 				380710092BEABFA700352E0D /* PlanPaymentScreen.swift in Sources */,

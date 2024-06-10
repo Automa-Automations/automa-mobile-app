@@ -323,13 +323,15 @@ struct Credits: View {
                     }
             }
         }.onAppear {
-            getUserTransactions(completion: self.saveTransactions)
+            Task.detached {
+                await getUserTransactions(completion: self.saveTransactions)
+            }
         }
     }
     
     func saveTransactions(transactions_: [Transaction]?, error: Error?) {
         guard let transactions_ else { self.isLoading = false; return Void() }
-            self.transactions = transactions_
+            self.transactions = transactions_.reversed()
         
         guard let error else { self.isLoading = false; return Void() }
             print("TODO: We need to figure this out")
