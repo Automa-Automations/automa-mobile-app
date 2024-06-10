@@ -170,6 +170,7 @@ struct Credits: View {
     @ObservedObject var model = PaymentSheetModel()
     @State var isLoading: Bool = true
     @State var transactions: [Transaction] = []
+    @State var transactionPurchase: Date = Date()
 
     var body: some View {
         NavigationStack {
@@ -196,11 +197,11 @@ struct Credits: View {
                                                 Text("Buy more")
                                             }.tint(.white)
                                         }.contextMenu(ContextMenu(menuItems: {
-                                            BuyCreditsButton(credits: 100, isBuyCredits: $isBuyCredits, model: model)
+                                            BuyCreditsButton(credits: 100, isBuyCredits: $isBuyCredits, model: model, mod: $transactionPurchase)
 
-                                            BuyCreditsButton(credits: 500, isBuyCredits: $isBuyCredits, model: model)
+                                            BuyCreditsButton(credits: 500, isBuyCredits: $isBuyCredits, model: model,  mod: $transactionPurchase)
 
-                                            BuyCreditsButton(credits: 1000, isBuyCredits: $isBuyCredits, model: model)
+                                            BuyCreditsButton(credits: 1000, isBuyCredits: $isBuyCredits, model: model,  mod: $transactionPurchase)
 
                                             Text("Earn free credits")
                                         }))
@@ -236,12 +237,12 @@ struct Credits: View {
                         NavigationStack {
                             VStack {
                                 HStack {
-                                    BuyCreditsButton(credits: 500, isBuyCredits: $isBuyCredits, model: model)
+                                    BuyCreditsButton(credits: 500, isBuyCredits: $isBuyCredits, model: model, mod: $transactionPurchase)
 
-                                    BuyCreditsButton(credits: 1000, isBuyCredits: $isBuyCredits, model: model)
+                                    BuyCreditsButton(credits: 1000, isBuyCredits: $isBuyCredits, model: model, mod: $transactionPurchase)
                                 }
 
-                                BuyCreditsButton(credits: 2000, isBuyCredits: $isBuyCredits, model: model)
+                                BuyCreditsButton(credits: 2000, isBuyCredits: $isBuyCredits, model: model, mod: $transactionPurchase)
                             }.toolbar {
                                 ToolbarItem(placement: .navigationBarLeading) {
                                     Button(action: {
@@ -264,6 +265,13 @@ struct Credits: View {
         }.onAppear {
             Task.detached {
                 await getUserTransactions(completion: self.saveTransactions)
+            }
+        }
+        .onChange(of: transactionPurchase) {
+            Task.detached {
+                print("STARTED")
+                await getUserTransactions(completion: self.saveTransactions)
+                print("ENDED")
             }
         }
     }
@@ -721,6 +729,7 @@ struct BuyCreditsButton: View {
     let credits: Int
     @Binding var isBuyCredits: Bool
     let model: PaymentSheetModel
+    @Binding var mod: Date
 
     var body: some View {
         GroupBox {
@@ -732,6 +741,7 @@ struct BuyCreditsButton: View {
                             await model.preparePaymentSheet(view: viewController, payment: "credits_\(credits)", completion: { _, success in
                                 if success {
                                     print("TRUE")
+                                    mod = Date()
                                 } else {
                                     print("FALSE")
                                 }
