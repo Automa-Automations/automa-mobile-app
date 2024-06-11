@@ -227,11 +227,7 @@ struct Credits: View {
 
                             }.padding(.horizontal, 20)
                                 .navigationDestination(for: Transaction.self) { transaction in
-                                    TransactionCell(transaction: transaction).padding(.horizontal, 20)
-                                    GenericTitle(title: nil, description: "Metadata", padding: nil)
-                                    // TODO: Map over all of the .metadata values
-                                    Text("Coming Soon")
-                                    Spacer()
+                                    CreditsMetadataView(transaction: transaction)
                                 }
 
                             Spacer()
@@ -765,6 +761,18 @@ struct BuyCreditsButton: View {
                 Text("\(credits) Credits")
                 Spacer()
             }
+        }
+    }
+}
+
+
+
+struct CreditsMetadataView: View {
+    let transaction: Transaction
+
+    var body: some View {
+        VStack {
+            Text("Coming Soon")
         }
     }
 }
