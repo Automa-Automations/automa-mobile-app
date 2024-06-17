@@ -5,14 +5,9 @@
 //  Created by Simon Ferns on 2024/05/03.
 //
 
+import Apollo
 import Foundation
 import SwiftUI
-import Foundation
-import Apollo
-
-
-
-
 
 struct AppView: View {
     @State var isAuthenticated = false
@@ -20,23 +15,19 @@ struct AppView: View {
     @State var hasAppLoaded = false
 
     var body: some View {
-        Group {
+        VStack {
             if !hasAppLoaded {
                 ProgressView()
+            } else if isAuthenticated && shouldUserPayBool {
+                PlanPaymentScreen(isAuthenticated: $isAuthenticated, shouldShowPaymentScreen: $shouldUserPayBool)
+            } else if isAuthenticated {
+                HomeTab()
             } else {
-                if isAuthenticated && shouldUserPayBool {
-                    PlanPaymentScreen(isAuthenticated: $isAuthenticated, shouldShowPaymentScreen: $shouldUserPayBool)
-                } else if isAuthenticated {
-                    HomeScreen()
-                } else {
-                    AuthScreen()
-                }
+                AuthScreen()
             }
         }
         .task {
             do {
-                
-                
                 for await state in await supabase_().auth.authStateChanges {
                     if [.initialSession, .signedIn, .signedOut].contains(state.event) {
                         isAuthenticated = state.session != nil
@@ -64,10 +55,6 @@ struct AppView: View {
                 .single()
                 .execute()
                 .value
-            
-            // Print my bearer token
-            let key = try await supabase_().auth.session.accessToken
-            print(key)
 
             let currentTimeStamp = Date().timeIntervalSince1970
             if profile.expiry_date == nil {

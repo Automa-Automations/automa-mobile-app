@@ -31,13 +31,18 @@
 		38209EAE2BF203F400A8B4AE /* AutoConfigure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38209EAD2BF203F400A8B4AE /* AutoConfigure.swift */; };
 		38209EB02BF204F200A8B4AE /* Urls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38209EAF2BF204F200A8B4AE /* Urls.swift */; };
 		3820B8072C0F0BFF00225C9A /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 3820B8062C0F0BFF00225C9A /* Apollo */; };
-		38811D912C022C4500A2C500 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38811D902C022C4500A2C500 /* HomeScreen.swift */; };
+		38811D912C022C4500A2C500 /* HomeTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38811D902C022C4500A2C500 /* HomeTab.swift */; };
 		389B17F02BE5652B006D8BEB /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = 389B17EF2BE5652B006D8BEB /* Supabase */; };
 		389B17F22BE56547006D8BEB /* Supabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389B17F12BE56547006D8BEB /* Supabase.swift */; };
 		389B17F42BE565FD006D8BEB /* AuthScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389B17F32BE565FD006D8BEB /* AuthScreen.swift */; };
 		389B17F72BE56747006D8BEB /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389B17F62BE56747006D8BEB /* ProfileView.swift */; };
 		389B17FB2BE567AA006D8BEB /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389B17FA2BE567AA006D8BEB /* AppView.swift */; };
 		389B17FF2BE576BE006D8BEB /* StripePaymentSheet in Frameworks */ = {isa = PBXBuildFile; productRef = 389B17FE2BE576BE006D8BEB /* StripePaymentSheet */; };
+		389B54332C202BF600F1E987 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389B54322C202BF400F1E987 /* Home.swift */; };
+		389B54362C202C9700F1E987 /* Credits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389B54352C202C9600F1E987 /* Credits.swift */; };
+		389B543A2C202CC800F1E987 /* CreateBot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389B54392C202CC800F1E987 /* CreateBot.swift */; };
+		389B543D2C202CED00F1E987 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389B543C2C202CE900F1E987 /* Notifications.swift */; };
+		389B54402C202D0800F1E987 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389B543F2C202D0600F1E987 /* Settings.swift */; };
 		38D230D82BFCB0E90005120A /* PaymentError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D230D72BFCB0E90005120A /* PaymentError.swift */; };
 		38DB8AFF2BD77C550091008B /* AutomaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DB8AFE2BD77C550091008B /* AutomaApp.swift */; };
 		38DB8B032BD77C580091008B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38DB8B022BD77C580091008B /* Assets.xcassets */; };
@@ -131,12 +136,17 @@
 		38201E032BF1ECDC003AE77C /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		38209EAD2BF203F400A8B4AE /* AutoConfigure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoConfigure.swift; sourceTree = "<group>"; };
 		38209EAF2BF204F200A8B4AE /* Urls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Urls.swift; sourceTree = "<group>"; };
-		38811D902C022C4500A2C500 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		38811D902C022C4500A2C500 /* HomeTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTab.swift; sourceTree = "<group>"; };
 		389B17F12BE56547006D8BEB /* Supabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Supabase.swift; sourceTree = "<group>"; };
 		389B17F32BE565FD006D8BEB /* AuthScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthScreen.swift; sourceTree = "<group>"; };
 		389B17F52BE5668D006D8BEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		389B17F62BE56747006D8BEB /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		389B17FA2BE567AA006D8BEB /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
+		389B54322C202BF400F1E987 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		389B54352C202C9600F1E987 /* Credits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credits.swift; sourceTree = "<group>"; };
+		389B54392C202CC800F1E987 /* CreateBot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateBot.swift; sourceTree = "<group>"; };
+		389B543C2C202CE900F1E987 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
+		389B543F2C202D0600F1E987 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		38D230D72BFCB0E90005120A /* PaymentError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentError.swift; sourceTree = "<group>"; };
 		38DB8AFB2BD77C550091008B /* Automa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Automa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38DB8AFE2BD77C550091008B /* AutomaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutomaApp.swift; sourceTree = "<group>"; };
@@ -269,7 +279,7 @@
 		3818FC082BE94A7700543D08 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				38811D8F2C022C2500A2C500 /* Home */,
+				38811D8F2C022C2500A2C500 /* HomeTab */,
 				38070FFC2BEAB35F00352E0D /* PlanPaymentScreen */,
 				3818FC092BE94A8900543D08 /* AuthScreen */,
 			);
@@ -430,13 +440,66 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
-		38811D8F2C022C2500A2C500 /* Home */ = {
+		38811D8F2C022C2500A2C500 /* HomeTab */ = {
 			isa = PBXGroup;
 			children = (
-				38811D902C022C4500A2C500 /* HomeScreen.swift */,
+				389B54302C202BC900F1E987 /* Screens */,
+				38811D902C022C4500A2C500 /* HomeTab.swift */,
 				381DC3592C02577D0092A951 /* Cells */,
 			);
+			path = HomeTab;
+			sourceTree = "<group>";
+		};
+		389B54302C202BC900F1E987 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				389B543E2C202CFE00F1E987 /* Settings */,
+				389B543B2C202CDD00F1E987 /* Notifications */,
+				389B54382C202CBB00F1E987 /* CreateBot */,
+				389B54342C202C7400F1E987 /* Credits */,
+				389B54312C202BED00F1E987 /* Home */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		389B54312C202BED00F1E987 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				389B54322C202BF400F1E987 /* Home.swift */,
+			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		389B54342C202C7400F1E987 /* Credits */ = {
+			isa = PBXGroup;
+			children = (
+				389B54352C202C9600F1E987 /* Credits.swift */,
+			);
+			path = Credits;
+			sourceTree = "<group>";
+		};
+		389B54382C202CBB00F1E987 /* CreateBot */ = {
+			isa = PBXGroup;
+			children = (
+				389B54392C202CC800F1E987 /* CreateBot.swift */,
+			);
+			path = CreateBot;
+			sourceTree = "<group>";
+		};
+		389B543B2C202CDD00F1E987 /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				389B543C2C202CE900F1E987 /* Notifications.swift */,
+			);
+			path = Notifications;
+			sourceTree = "<group>";
+		};
+		389B543E2C202CFE00F1E987 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				389B543F2C202D0600F1E987 /* Settings.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		38DB8AF22BD77C550091008B = {
@@ -779,6 +842,7 @@
 				3818FC1C2BE94EA800543D08 /* EmailResentAlert.swift in Sources */,
 				38201DFC2BF1EA14003AE77C /* Profile.swift in Sources */,
 				38E247DC2C12FA8F00B20C54 /* Transactions.swift in Sources */,
+				389B54332C202BF600F1E987 /* Home.swift in Sources */,
 				38F76D3B2C16EE67001E7140 /* Profiles.graphql.swift in Sources */,
 				38070FF42BE9631300352E0D /* AuthErrorAlertIOS.swift in Sources */,
 				3818FC0D2BE94ACA00543D08 /* AuthScreenModel.swift in Sources */,
@@ -802,10 +866,12 @@
 				38F76D2E2C16EE67001E7140 /* FetchAllTransactionsPaginatedQuery.graphql.swift in Sources */,
 				38F76D352C16EE67001E7140 /* UUID.swift in Sources */,
 				389B17FB2BE567AA006D8BEB /* AppView.swift in Sources */,
+				389B543D2C202CED00F1E987 /* Notifications.swift in Sources */,
+				389B543A2C202CC800F1E987 /* CreateBot.swift in Sources */,
 				38F76D442C16EE67001E7140 /* SchemaMetadata.graphql.swift in Sources */,
 				389B17F42BE565FD006D8BEB /* AuthScreen.swift in Sources */,
 				38D230D82BFCB0E90005120A /* PaymentError.swift in Sources */,
-				38811D912C022C4500A2C500 /* HomeScreen.swift in Sources */,
+				38811D912C022C4500A2C500 /* HomeTab.swift in Sources */,
 				38F76D3A2C16EE67001E7140 /* Plans.graphql.swift in Sources */,
 				38F76D402C16EE67001E7140 /* Transactions.graphql.swift in Sources */,
 				38E247D62C12F9D000B20C54 /* ApolloProvider.swift in Sources */,
@@ -832,6 +898,8 @@
 				38209EB02BF204F200A8B4AE /* Urls.swift in Sources */,
 				38201DFE2BF1EA99003AE77C /* AvatarImage.swift in Sources */,
 				38070FF22BE961B300352E0D /* CloseEmailSentSheetToolBar.swift in Sources */,
+				389B54402C202D0800F1E987 /* Settings.swift in Sources */,
+				389B54362C202C9700F1E987 /* Credits.swift in Sources */,
 				38F76D362C16EE67001E7140 /* Node.graphql.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
