@@ -29,15 +29,15 @@ struct Credits: View {
                                     VStack(alignment: .leading) {
                                         Text("Credit balance")
                                             .font(.footnote)
-                                            .foregroundStyle(Color(hex: 0x8E8E93))
+                                            .foregroundStyle(Color("DarkAccentColor"))
                                         Text("\(credits) ⌘")
                                             .font(.largeTitle)
                                             .fontWeight(.bold)
 
                                         Button(action: { isBuyCredits.toggle() }) {
                                             GroupBox {
-                                                Text("Buy more")
-                                            }.tint(.white)
+                                                Text("Buy more").foregroundStyle(Color("DarkAccentColor"))
+                                            }
                                         }.contextMenu(ContextMenu(menuItems: {
                                             BuyCreditsButton(credits: 100, isBuyCredits: $isBuyCredits, model: model, mod: $transactionPurchase)
 

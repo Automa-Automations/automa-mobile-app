@@ -21,7 +21,7 @@ struct CreateBot: View {
                                 Spacer()
                                 Text("Trending Now")
                                     .font(.footnote)
-                                    .foregroundStyle(Color(hex: 0x8E8E93))
+                                    .foregroundStyle(Color("DarkAccentColor"))
                             }
                             HStack {
                                 Text("Podcast Bot")
@@ -37,7 +37,7 @@ struct CreateBot: View {
                             HStack {
                                 Text("An automation workflow that will generate cute animal images, and automatically post them on instagram.")
                                     .font(.caption)
-                                    .foregroundStyle(Color(hex: 0x8E8E93))
+                                    .foregroundStyle(Color("DarkAccentColor"))
                                 Spacer()
                             }
                         }
@@ -53,19 +53,19 @@ struct CreateBot: View {
                                 Image(systemName: "heart")
                                     .font(.caption)
                                     .padding(.trailing, -3)
-                                    .foregroundStyle(Color(hex: 0x8E8E93))
+                                    .foregroundStyle(Color("DarkAccentColor"))
                                 Text("4.3k")
                                     .font(.caption)
-                                    .foregroundStyle(Color(hex: 0x8E8E93))
+                                    .foregroundStyle(Color("DarkAccentColor"))
                             }
                             HStack {
                                 Image(systemName: "plus.square.fill")
                                     .font(.caption)
-                                    .foregroundStyle(Color(hex: 0x8E8E93))
+                                    .foregroundStyle(Color("DarkAccentColor"))
                                     .padding(.trailing, -3)
                                 Text("7.5m")
                                     .font(.caption)
-                                    .foregroundStyle(Color(hex: 0x8E8E93))
+                                    .foregroundStyle(Color("DarkAccentColor"))
                             }
                         }
                     }.padding(.horizontal, 20)
@@ -77,7 +77,7 @@ struct CreateBot: View {
                                 Spacer()
                                 Text("Trending Now")
                                     .font(.footnote)
-                                    .foregroundStyle(Color(hex: 0x8E8E93))
+                                    .foregroundStyle(Color("DarkAccentColor"))
                             }
                             HStack {
                                 Text("Bot2")
@@ -93,7 +93,7 @@ struct CreateBot: View {
                             HStack {
                                 Text("An automation workflow that will generate cute animal images, and automatically post them on instagram.")
                                     .font(.caption)
-                                    .foregroundStyle(Color(hex: 0x8E8E93))
+                                    .foregroundStyle(Color("DarkAccentColor"))
                                 Spacer()
                             }
                         }
@@ -109,19 +109,19 @@ struct CreateBot: View {
                                 Image(systemName: "heart")
                                     .font(.caption)
                                     .padding(.trailing, -3)
-                                    .foregroundStyle(Color(hex: 0x8E8E93))
+                                    .foregroundStyle(Color("DarkAccentColor"))
                                 Text("4.3k")
                                     .font(.caption)
-                                    .foregroundStyle(Color(hex: 0x8E8E93))
+                                    .foregroundStyle(Color("DarkAccentColor"))
                             }
                             HStack {
                                 Image(systemName: "plus.square.fill")
                                     .font(.caption)
-                                    .foregroundStyle(Color(hex: 0x8E8E93))
+                                    .foregroundStyle(Color("DarkAccentColor"))
                                     .padding(.trailing, -3)
                                 Text("7.5m")
                                     .font(.caption)
-                                    .foregroundStyle(Color(hex: 0x8E8E93))
+                                    .foregroundStyle(Color("DarkAccentColor"))
                             }
                         }
                     }.padding(.horizontal, 20)
@@ -132,7 +132,7 @@ struct CreateBot: View {
                                 Spacer()
                                 Text("Trending Now")
                                     .font(.footnote)
-                                    .foregroundStyle(Color(hex: 0x8E8E93))
+                                    .foregroundStyle(Color("DarkAccentColor"))
                             }
                             HStack {
                                 Text("Cute Animals Generator")
@@ -148,7 +148,7 @@ struct CreateBot: View {
                             HStack {
                                 Text("An automation workflow that will generate cute animal images, and automatically post them on instagram.")
                                     .font(.caption)
-                                    .foregroundStyle(Color(hex: 0x8E8E93))
+                                    .foregroundStyle(Color("DarkAccentColor"))
                                 Spacer()
                             }
                         }
@@ -164,19 +164,19 @@ struct CreateBot: View {
                                 Image(systemName: "heart")
                                     .font(.caption)
                                     .padding(.trailing, -3)
-                                    .foregroundStyle(Color(hex: 0x8E8E93))
+                                    .foregroundStyle(Color("DarkAccentColor"))
                                 Text("4.3k")
                                     .font(.caption)
-                                    .foregroundStyle(Color(hex: 0x8E8E93))
+                                    .foregroundStyle(Color("DarkAccentColor"))
                             }
                             HStack {
                                 Image(systemName: "plus.square.fill")
                                     .font(.caption)
-                                    .foregroundStyle(Color(hex: 0x8E8E93))
+                                    .foregroundStyle(Color("DarkAccentColor"))
                                     .padding(.trailing, -3)
                                 Text("7.5m")
                                     .font(.caption)
-                                    .foregroundStyle(Color(hex: 0x8E8E93))
+                                    .foregroundStyle(Color("DarkAccentColor"))
                             }
                         }
                     }.padding(.horizontal, 20)
@@ -206,7 +206,7 @@ struct CreateBot: View {
                                 HStack {
                                     Text("A Instagram bot.")
                                         .font(.caption)
-                                        .foregroundStyle(Color(hex: 0x8E8E93))
+                                        .foregroundStyle(Color("DarkAccentColor"))
                                     Spacer()
                                 }
                             }
@@ -222,10 +222,10 @@ struct CreateBot: View {
                                     Image(systemName: "heart")
                                         .font(.caption)
                                         .padding(.trailing, -3)
-                                        .foregroundStyle(Color(hex: 0x8E8E93))
+                                        .foregroundStyle(Color("DarkAccentColor"))
                                     Text("4.3k")
                                         .font(.caption)
-                                        .foregroundStyle(Color(hex: 0x8E8E93))
+                                        .foregroundStyle(Color("DarkAccentColor"))
                                 }
                             }
                         }
@@ -252,7 +252,7 @@ struct CreateBot: View {
                                 HStack {
                                     Text("A Instagram bot.")
                                         .font(.caption)
-                                        .foregroundStyle(Color(hex: 0x8E8E93))
+                                        .foregroundStyle(Color("DarkAccentColor"))
                                     Spacer()
                                 }
                             }
@@ -268,10 +268,10 @@ struct CreateBot: View {
                                     Image(systemName: "heart")
                                         .font(.caption)
                                         .padding(.trailing, -3)
-                                        .foregroundStyle(Color(hex: 0x8E8E93))
+                                        .foregroundStyle(Color("DarkAccentColor"))
                                     Text("4.3k")
                                         .font(.caption)
-                                        .foregroundStyle(Color(hex: 0x8E8E93))
+                                        .foregroundStyle(Color("DarkAccentColor"))
                                 }
                             }
                         }
@@ -297,7 +297,7 @@ struct CreateBot: View {
                                 HStack {
                                     Text("Create an instagram bot.")
                                         .font(.caption)
-                                        .foregroundStyle(Color(hex: 0x8E8E93))
+                                        .foregroundStyle(Color("DarkAccentColor"))
                                     Spacer()
                                 }
                             }
@@ -313,10 +313,10 @@ struct CreateBot: View {
                                     Image(systemName: "heart")
                                         .font(.caption)
                                         .padding(.trailing, -3)
-                                        .foregroundStyle(Color(hex: 0x8E8E93))
+                                        .foregroundStyle(Color("DarkAccentColor"))
                                     Text("4.3k")
                                         .font(.caption)
-                                        .foregroundStyle(Color(hex: 0x8E8E93))
+                                        .foregroundStyle(Color("DarkAccentColor"))
                                 }
                             }
                         }
@@ -359,7 +359,7 @@ struct CreateBot: View {
                     HStack(alignment: .top) {
                         Image(systemName: "plus.square.fill")
                             .font(.title)
-                            .foregroundStyle(Color(hex: 0x8E8E93))
+                            .foregroundStyle(Color("DarkAccentColor"))
                     }
                     HStack {
                         Text("Create custom bot")

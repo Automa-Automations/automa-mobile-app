@@ -87,7 +87,7 @@ struct CostChart: View {
                 VStack(alignment: .leading) {
                     Text("6 - 13 Jun Average")
                         .font(.callout)
-                        .foregroundStyle(Color(hex: 0x8E8E93))
+                        .foregroundStyle(Color("DarkAccentColor"))
                     Text("185 ⌘")
                         .font(.largeTitle)
                         .fontWeight(.bold)
@@ -95,10 +95,10 @@ struct CostChart: View {
                 Spacer()
                 HStack {
                     Image(systemName: "arrowshape.down.circle.fill")
-                        .foregroundStyle(Color(hex: 0x8E8E93))
+                        .foregroundStyle(Color("DarkAccentColor"))
                     Text("38% from last week")
                         .font(.footnote)
-                        .foregroundStyle(Color(hex: 0x8E8E93))
+                        .foregroundStyle(Color("DarkAccentColor"))
                 }.frame(width: .infinity)
             }
             GeometryReader { geometry in
@@ -121,7 +121,7 @@ struct CostChart: View {
                         VStack {
                             Text("\(getHighestDay()) ⌘")
                                 .font(.footnote)
-                            .foregroundStyle(Color(hex: 0x8E8E93))
+                            .foregroundStyle(Color("DarkAccentColor"))
                         }
 
                     }

@@ -11,33 +11,29 @@ struct HomeTab: View {
     var body: some View {
         NavigationStack {
             TabView {
-                // Homescreen
                 Home()
                     .tabItem {
                         Image(systemName: "house")
                         Text("Home")
                     }
 
-                // Credits
                 Credits()
                     .tabItem {
                         Image(systemName: "command.square.fill")
                         Text("Credits")
                     }
 
-                // Create Bot View
                 CreateBot()
                     .tabItem {
                         Image(systemName: "plus.app")
                         Text("New Bot")
                     }
-                // Notifications
                 Notifications_()
                     .tabItem {
                         Image(systemName: "bell")
                         Text("Notifications")
                     }
-                // Settings
+                
                 Settings_()
                     .tabItem {
                         Image(systemName: "gear")
@@ -61,7 +57,7 @@ struct TransactionCell: View {
                 VStack(alignment: .leading) {
                     Text(transaction.created_at.formatted().split(separator: ",")[0])
                         .font(.callout)
-                        .foregroundStyle(Color(hex: 0x8E8E93))
+                        .foregroundStyle(Color("DarkAccentColor"))
                     HStack {
                         Spacer()
                         if transaction.credits > 0 {
@@ -76,7 +72,7 @@ struct TransactionCell: View {
                     }
                     Text("※ \(transaction.head)")
                         .font(.callout)
-                        .foregroundStyle(Color(hex: 0x8E8E93))
+                        .foregroundStyle(Color("DarkAccentColor"))
                 }
                 Spacer()
             }

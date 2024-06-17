@@ -23,7 +23,7 @@ struct Notifications_: View {
                                 VStack(alignment: .leading) {
                                     Text("※ Image Generation")
                                         .font(.caption)
-                                        .foregroundStyle(Color(hex: 0x8E8E93))
+                                        .foregroundStyle(Color("DarkAccentColor"))
                                     Text("😳 Bots are using 70% more credits than usual.").font(.footnote)
                                 }
                                 Spacer()
